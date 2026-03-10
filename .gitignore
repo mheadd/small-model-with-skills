@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+venv/
+
+# Generated HTML outputs (large, reproducible)
+results/with_skills/
+results/without_skills/
+
+# Run metadata (large, reproducible)
+results/run_*.json

@@ -1,0 +1,4252 @@
+{
+  "run_id": "qwen2.5-coder_7b_20260310_164110",
+  "model": "qwen2.5-coder:7b",
+  "without_skills": {
+    "num_tasks": 10,
+    "avg_composite": 0.792,
+    "avg_uswds_classes": 0.636,
+    "avg_html_structure": 0.822,
+    "avg_accessibility": 0.73,
+    "per_task": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.585,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-col-lg-3",
+              "grid-col-lg-6",
+              "grid-container",
+              "grid-gap",
+              "grid-row",
+              "usa-accordion",
+              "usa-accordion-button",
+              "usa-accordion-button--nav",
+              "usa-footer",
+              "usa-footer--basic",
+              "usa-footer__list",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-section",
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-logo__img",
+              "usa-logo__text",
+              "usa-logo__text-label",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-section",
+              "usa-section--flush",
+              "usa-unstyled-list"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "header"
+            ],
+            "missing": [
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'div', 'div', 'em', 'a']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.671,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.125,
+            "found": [
+              "usa-alert"
+            ],
+            "missing": [
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": [
+              "usa-alert",
+              "usa-alert-error",
+              "usa-alert-heading",
+              "usa-alert-info",
+              "usa-alert-success",
+              "usa-alert-text",
+              "usa-alert-warning"
+            ]
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.9,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled",
+              "usa-button-group"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.945,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.818,
+            "found": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "missing": [
+              "usa-card-group",
+              "usa-card__container"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-col-lg-3",
+              "grid-col-md-6",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.985,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-input",
+              "usa-label",
+              "usa-label__required",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.877,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-header",
+              "usa-logo",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-search"
+            ],
+            "missing": [
+              "usa-header--basic",
+              "usa-navbar"
+            ],
+            "extra_uswds_classes": [
+              "usa-accordion",
+              "usa-button",
+              "usa-header",
+              "usa-header__body",
+              "usa-input",
+              "usa-label",
+              "usa-logo",
+              "usa-logo__image",
+              "usa-logo__text",
+              "usa-logo__title",
+              "usa-nav",
+              "usa-nav__button",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-search",
+              "usa-search--small",
+              "usa-search__inner"
+            ]
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "button",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [
+              "form"
+            ],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label",
+              "role"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['header', 'div', 'div', 'em', 'a', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.745,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-table",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [
+              "usa-table--bordered"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-table",
+              "usa-table--borderless",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--error",
+              "usa-tag--success",
+              "usa-tag--warning"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "span",
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.676,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.571,
+            "found": [
+              "grid-container",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-sidenav"
+            ],
+            "missing": [
+              "grid-gap",
+              "grid-row",
+              "usa-current"
+            ],
+            "extra_uswds_classes": [
+              "grid-container",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-alert__body",
+              "usa-grid",
+              "usa-layout-docs__main",
+              "usa-sidenav",
+              "usa-sidenav__item",
+              "usa-sidenav__item--current",
+              "usa-sidenav__link",
+              "usa-sidenav__list",
+              "usa-width-1/2-desktop",
+              "usa-width-3/4-tablet",
+              "usa-width-full-mobile"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "main",
+              "nav",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.656,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.571,
+            "found": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select"
+            ],
+            "missing": [
+              "grid-col",
+              "grid-row",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button--primary",
+              "usa-button-group",
+              "usa-current",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form--large",
+              "usa-form-group",
+              "usa-grid",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-nav",
+              "usa-nav-link",
+              "usa-nav-primary",
+              "usa-nav-primary-item",
+              "usa-select",
+              "usa-unstyled",
+              "usa-width-one-whole"
+            ]
+          },
+          "html_structure": {
+            "score": 0.9,
+            "found": [
+              "button",
+              "div",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "li",
+              "select"
+            ],
+            "missing": [
+              "ol"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'div', 'div', 'form', 'fieldset', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.882,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.778,
+            "found": [
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-footer",
+              "usa-header",
+              "usa-nav"
+            ],
+            "missing": [
+              "usa-banner",
+              "usa-card-group"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-col-4",
+              "grid-container",
+              "grid-gap",
+              "grid-row",
+              "usa-accordion",
+              "usa-button",
+              "usa-button--big",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__header",
+              "usa-card__heading",
+              "usa-footer",
+              "usa-footer--slim",
+              "usa-header",
+              "usa-header__content",
+              "usa-hero",
+              "usa-hero__heading",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-nav",
+              "usa-nav__button",
+              "usa-nav__content",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-section"
+            ]
+          },
+          "html_structure": {
+            "score": 0.818,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h2",
+              "header",
+              "main",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "h3",
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label",
+              "role"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "aria-labelledby",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded', 'aria-labelledby']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/10_full_page.html"
+      }
+    ]
+  },
+  "with_skills": {
+    "num_tasks": 10,
+    "avg_composite": 0.809,
+    "avg_uswds_classes": 0.712,
+    "avg_html_structure": 0.813,
+    "avg_accessibility": 0.7,
+    "per_task": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.885,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-accordion-button",
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header",
+              "usa-banner__header-flag",
+              "usa-banner__header-text",
+              "usa-banner__inner",
+              "usa-footer",
+              "usa-footer--slim",
+              "usa-footer-return-to-top",
+              "usa-footer__logo",
+              "usa-footer__logo-heading",
+              "usa-footer__logo-img",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-section",
+              "usa-footer__social-links",
+              "usa-grid",
+              "usa-header",
+              "usa-header__button",
+              "usa-header__inner",
+              "usa-layout-docs",
+              "usa-logo",
+              "usa-logo__image",
+              "usa-logo__text",
+              "usa-logo__text-heading",
+              "usa-nav",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-nav__list",
+              "usa-social-link",
+              "usa-width-full",
+              "usa-width-one-half"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "header"
+            ],
+            "missing": [
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded', 'role']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'div', 'div', 'em', 'a', 'div', 'div', 'div', 'footer', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.671,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.125,
+            "found": [
+              "usa-alert"
+            ],
+            "missing": [
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": [
+              "usa-alert",
+              "usa-alert-error",
+              "usa-alert-heading",
+              "usa-alert-info",
+              "usa-alert-success",
+              "usa-alert-text",
+              "usa-alert-warning"
+            ]
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.9,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled",
+              "usa-button-group"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.945,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.818,
+            "found": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "missing": [
+              "usa-card-group",
+              "usa-card__container"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-col-desktop-3",
+              "grid-col-tablet-6",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.985,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-hint",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.948,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.875,
+            "found": [
+              "usa-header",
+              "usa-logo",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-search"
+            ],
+            "missing": [
+              "usa-header--basic"
+            ],
+            "extra_uswds_classes": [
+              "usa-accordion-button",
+              "usa-button",
+              "usa-button--icon-only",
+              "usa-header",
+              "usa-icon",
+              "usa-icon--search",
+              "usa-input",
+              "usa-logo",
+              "usa-logo__link",
+              "usa-logo__text",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-navbar__button",
+              "usa-search",
+              "usa-search--small",
+              "usa-sr-only"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "button",
+              "form",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label",
+              "role"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "aria-labelledby",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded', 'aria-labelledby']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['header', 'div', 'nav', 'form']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.745,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-table",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [
+              "usa-table--bordered"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--danger",
+              "usa-button--outline",
+              "usa-table",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--error",
+              "usa-tag--success",
+              "usa-tag--warning"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "span",
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.701,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.714,
+            "found": [
+              "grid-container",
+              "grid-row",
+              "usa-alert",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "missing": [
+              "grid-gap",
+              "usa-alert--info"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-3",
+              "grid-col-9",
+              "grid-container",
+              "grid-row",
+              "usa-alert",
+              "usa-alert-info",
+              "usa-alert__body",
+              "usa-current",
+              "usa-sidenav",
+              "usa-sidenav__item",
+              "usa-sidenav__list"
+            ]
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "main"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.635,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.5,
+            "found": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select"
+            ],
+            "missing": [
+              "grid-col",
+              "grid-row",
+              "usa-fieldset",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button--primary",
+              "usa-button-group",
+              "usa-form",
+              "usa-form-group",
+              "usa-grid",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-site-nav",
+              "usa-site-nav__item",
+              "usa-site-nav__item--current",
+              "usa-site-nav__link",
+              "usa-unstyled-list",
+              "usa-width-one-whole"
+            ]
+          },
+          "html_structure": {
+            "score": 0.9,
+            "found": [
+              "button",
+              "div",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "li",
+              "select"
+            ],
+            "missing": [
+              "ol"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'div', 'div', 'form', 'fieldset', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.67,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.333,
+            "found": [
+              "usa-button",
+              "usa-header",
+              "usa-nav"
+            ],
+            "missing": [
+              "grid-container",
+              "grid-row",
+              "usa-banner",
+              "usa-card",
+              "usa-card-group",
+              "usa-footer"
+            ],
+            "extra_uswds_classes": [
+              "usa-accordion",
+              "usa-accordion__button",
+              "usa-button",
+              "usa-footer__link",
+              "usa-footer__nav",
+              "usa-footer__nav-item",
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar"
+            ]
+          },
+          "html_structure": {
+            "score": 0.727,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h2",
+              "header",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "h3",
+              "main",
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.7,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/10_full_page.html"
+      }
+    ]
+  },
+  "deltas": {
+    "composite": 0.017,
+    "uswds_classes": 0.076,
+    "html_structure": -0.009,
+    "accessibility": -0.03
+  },
+  "evaluations": {
+    "with_skills": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.885,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-accordion-button",
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header",
+              "usa-banner__header-flag",
+              "usa-banner__header-text",
+              "usa-banner__inner",
+              "usa-footer",
+              "usa-footer--slim",
+              "usa-footer-return-to-top",
+              "usa-footer__logo",
+              "usa-footer__logo-heading",
+              "usa-footer__logo-img",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-section",
+              "usa-footer__social-links",
+              "usa-grid",
+              "usa-header",
+              "usa-header__button",
+              "usa-header__inner",
+              "usa-layout-docs",
+              "usa-logo",
+              "usa-logo__image",
+              "usa-logo__text",
+              "usa-logo__text-heading",
+              "usa-nav",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-nav__list",
+              "usa-social-link",
+              "usa-width-full",
+              "usa-width-one-half"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "header"
+            ],
+            "missing": [
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded', 'role']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'div', 'div', 'em', 'a', 'div', 'div', 'div', 'footer', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.671,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.125,
+            "found": [
+              "usa-alert"
+            ],
+            "missing": [
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": [
+              "usa-alert",
+              "usa-alert-error",
+              "usa-alert-heading",
+              "usa-alert-info",
+              "usa-alert-success",
+              "usa-alert-text",
+              "usa-alert-warning"
+            ]
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.9,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled",
+              "usa-button-group"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.945,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.818,
+            "found": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "missing": [
+              "usa-card-group",
+              "usa-card__container"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-col-desktop-3",
+              "grid-col-tablet-6",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.985,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-hint",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.948,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.875,
+            "found": [
+              "usa-header",
+              "usa-logo",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-search"
+            ],
+            "missing": [
+              "usa-header--basic"
+            ],
+            "extra_uswds_classes": [
+              "usa-accordion-button",
+              "usa-button",
+              "usa-button--icon-only",
+              "usa-header",
+              "usa-icon",
+              "usa-icon--search",
+              "usa-input",
+              "usa-logo",
+              "usa-logo__link",
+              "usa-logo__text",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-navbar__button",
+              "usa-search",
+              "usa-search--small",
+              "usa-sr-only"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "button",
+              "form",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label",
+              "role"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "aria-labelledby",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded', 'aria-labelledby']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['header', 'div', 'nav', 'form']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.745,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-table",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [
+              "usa-table--bordered"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--danger",
+              "usa-button--outline",
+              "usa-table",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--error",
+              "usa-tag--success",
+              "usa-tag--warning"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "span",
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.701,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.714,
+            "found": [
+              "grid-container",
+              "grid-row",
+              "usa-alert",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "missing": [
+              "grid-gap",
+              "usa-alert--info"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-3",
+              "grid-col-9",
+              "grid-container",
+              "grid-row",
+              "usa-alert",
+              "usa-alert-info",
+              "usa-alert__body",
+              "usa-current",
+              "usa-sidenav",
+              "usa-sidenav__item",
+              "usa-sidenav__list"
+            ]
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "main"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.635,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.5,
+            "found": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select"
+            ],
+            "missing": [
+              "grid-col",
+              "grid-row",
+              "usa-fieldset",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button--primary",
+              "usa-button-group",
+              "usa-form",
+              "usa-form-group",
+              "usa-grid",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-site-nav",
+              "usa-site-nav__item",
+              "usa-site-nav__item--current",
+              "usa-site-nav__link",
+              "usa-unstyled-list",
+              "usa-width-one-whole"
+            ]
+          },
+          "html_structure": {
+            "score": 0.9,
+            "found": [
+              "button",
+              "div",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "li",
+              "select"
+            ],
+            "missing": [
+              "ol"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'div', 'div', 'form', 'fieldset', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.67,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.333,
+            "found": [
+              "usa-button",
+              "usa-header",
+              "usa-nav"
+            ],
+            "missing": [
+              "grid-container",
+              "grid-row",
+              "usa-banner",
+              "usa-card",
+              "usa-card-group",
+              "usa-footer"
+            ],
+            "extra_uswds_classes": [
+              "usa-accordion",
+              "usa-accordion__button",
+              "usa-button",
+              "usa-footer__link",
+              "usa-footer__nav",
+              "usa-footer__nav-item",
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar"
+            ]
+          },
+          "html_structure": {
+            "score": 0.727,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h2",
+              "header",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "h3",
+              "main",
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.7,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/qwen2.5-coder_7b_20260310_164110/10_full_page.html"
+      }
+    ],
+    "without_skills": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.585,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-col-lg-3",
+              "grid-col-lg-6",
+              "grid-container",
+              "grid-gap",
+              "grid-row",
+              "usa-accordion",
+              "usa-accordion-button",
+              "usa-accordion-button--nav",
+              "usa-footer",
+              "usa-footer--basic",
+              "usa-footer__list",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-section",
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-logo__img",
+              "usa-logo__text",
+              "usa-logo__text-label",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-section",
+              "usa-section--flush",
+              "usa-unstyled-list"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "header"
+            ],
+            "missing": [
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'div', 'div', 'em', 'a']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.671,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.125,
+            "found": [
+              "usa-alert"
+            ],
+            "missing": [
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": [
+              "usa-alert",
+              "usa-alert-error",
+              "usa-alert-heading",
+              "usa-alert-info",
+              "usa-alert-success",
+              "usa-alert-text",
+              "usa-alert-warning"
+            ]
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.9,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled",
+              "usa-button-group"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.945,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.818,
+            "found": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "missing": [
+              "usa-card-group",
+              "usa-card__container"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-col-lg-3",
+              "grid-col-md-6",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.985,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-input",
+              "usa-label",
+              "usa-label__required",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.877,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-header",
+              "usa-logo",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-search"
+            ],
+            "missing": [
+              "usa-header--basic",
+              "usa-navbar"
+            ],
+            "extra_uswds_classes": [
+              "usa-accordion",
+              "usa-button",
+              "usa-header",
+              "usa-header__body",
+              "usa-input",
+              "usa-label",
+              "usa-logo",
+              "usa-logo__image",
+              "usa-logo__text",
+              "usa-logo__title",
+              "usa-nav",
+              "usa-nav__button",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-search",
+              "usa-search--small",
+              "usa-search__inner"
+            ]
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "button",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [
+              "form"
+            ],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label",
+              "role"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['header', 'div', 'div', 'em', 'a', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.745,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-table",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [
+              "usa-table--bordered"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-table",
+              "usa-table--borderless",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--error",
+              "usa-tag--success",
+              "usa-tag--warning"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "span",
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.676,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.571,
+            "found": [
+              "grid-container",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-sidenav"
+            ],
+            "missing": [
+              "grid-gap",
+              "grid-row",
+              "usa-current"
+            ],
+            "extra_uswds_classes": [
+              "grid-container",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-alert__body",
+              "usa-grid",
+              "usa-layout-docs__main",
+              "usa-sidenav",
+              "usa-sidenav__item",
+              "usa-sidenav__item--current",
+              "usa-sidenav__link",
+              "usa-sidenav__list",
+              "usa-width-1/2-desktop",
+              "usa-width-3/4-tablet",
+              "usa-width-full-mobile"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "main",
+              "nav",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.656,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.571,
+            "found": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select"
+            ],
+            "missing": [
+              "grid-col",
+              "grid-row",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button--primary",
+              "usa-button-group",
+              "usa-current",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form--large",
+              "usa-form-group",
+              "usa-grid",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-nav",
+              "usa-nav-link",
+              "usa-nav-primary",
+              "usa-nav-primary-item",
+              "usa-select",
+              "usa-unstyled",
+              "usa-width-one-whole"
+            ]
+          },
+          "html_structure": {
+            "score": 0.9,
+            "found": [
+              "button",
+              "div",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "li",
+              "select"
+            ],
+            "missing": [
+              "ol"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'div', 'div', 'form', 'fieldset', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.882,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.778,
+            "found": [
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-footer",
+              "usa-header",
+              "usa-nav"
+            ],
+            "missing": [
+              "usa-banner",
+              "usa-card-group"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-col-4",
+              "grid-container",
+              "grid-gap",
+              "grid-row",
+              "usa-accordion",
+              "usa-button",
+              "usa-button--big",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__header",
+              "usa-card__heading",
+              "usa-footer",
+              "usa-footer--slim",
+              "usa-header",
+              "usa-header__content",
+              "usa-hero",
+              "usa-hero__heading",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-nav",
+              "usa-nav__button",
+              "usa-nav__content",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-section"
+            ]
+          },
+          "html_structure": {
+            "score": 0.818,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h2",
+              "header",
+              "main",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "h3",
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label",
+              "role"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "aria-labelledby",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded', 'aria-labelledby']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/qwen2.5-coder_7b_20260310_164110/10_full_page.html"
+      }
+    ]
+  }
+}

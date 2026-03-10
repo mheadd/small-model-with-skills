@@ -1,0 +1,92 @@
+[
+  {
+    "id": "01_gov_banner",
+    "name": "Government Banner",
+    "difficulty": "easy",
+    "prompt": "Generate a complete HTML page with a U.S. government official website banner at the top. The banner should indicate that this is an official government website and include the .gov domain explanation. Use USWDS CSS classes.",
+    "expected_classes": ["usa-banner", "usa-banner__header", "usa-banner__content"],
+    "expected_elements": ["header", "section"],
+    "expected_aria": ["aria-label"]
+  },
+  {
+    "id": "02_alert_set",
+    "name": "Alert Components",
+    "difficulty": "easy",
+    "prompt": "Generate HTML for four USWDS alert components: an info alert, a success alert, a warning alert, and an error alert. Each should have a heading and body text. Use proper USWDS CSS classes.",
+    "expected_classes": ["usa-alert", "usa-alert--info", "usa-alert--success", "usa-alert--warning", "usa-alert--error", "usa-alert__heading", "usa-alert__body", "usa-alert__text"],
+    "expected_elements": ["div", "h3", "p"],
+    "expected_aria": []
+  },
+  {
+    "id": "03_button_variants",
+    "name": "Button Variants",
+    "difficulty": "easy",
+    "prompt": "Generate HTML for a set of USWDS buttons showing all variants: default, secondary, accent-cool, accent-warm, base, outline, inverse (on a dark background), big, and unstyled. Use proper USWDS CSS classes.",
+    "expected_classes": ["usa-button", "usa-button--secondary", "usa-button--accent-cool", "usa-button--accent-warm", "usa-button--base", "usa-button--outline", "usa-button--inverse", "usa-button--big", "usa-button--unstyled"],
+    "expected_elements": ["button", "a"],
+    "expected_aria": []
+  },
+  {
+    "id": "04_card_grid",
+    "name": "Card Grid Layout",
+    "difficulty": "medium",
+    "prompt": "Generate HTML for a responsive grid of 4 USWDS cards. Each card should have a header with a heading, a body with paragraph text, and a footer with a button. The cards should be full-width on mobile, 2 per row on tablet, and 4 per row on desktop. Use the USWDS grid system and card component classes.",
+    "expected_classes": ["grid-container", "grid-row", "grid-col-12", "usa-card", "usa-card-group", "usa-card__container", "usa-card__header", "usa-card__heading", "usa-card__body", "usa-card__footer", "usa-button"],
+    "expected_elements": ["div", "h3", "p", "button"],
+    "expected_aria": []
+  },
+  {
+    "id": "05_contact_form",
+    "name": "Contact Form",
+    "difficulty": "medium",
+    "prompt": "Generate HTML for a USWDS contact form with the following fields: full name (text input), email address (email input), phone number (tel input, optional), subject (select dropdown with 3 options), and message (textarea). Include proper labels, required field markers, a fieldset with legend, and a submit button. Use USWDS form component classes.",
+    "expected_classes": ["usa-form", "usa-fieldset", "usa-legend", "usa-label", "usa-input", "usa-select", "usa-textarea", "usa-button"],
+    "expected_elements": ["form", "fieldset", "legend", "label", "input", "select", "option", "textarea", "button"],
+    "expected_aria": []
+  },
+  {
+    "id": "06_header_nav",
+    "name": "Site Header with Navigation",
+    "difficulty": "medium",
+    "prompt": "Generate HTML for a USWDS basic site header with a site title/logo, primary navigation with 4 menu items, and a search bar. Include proper accessibility attributes. Use USWDS header and navigation CSS classes.",
+    "expected_classes": ["usa-header", "usa-header--basic", "usa-navbar", "usa-logo", "usa-nav", "usa-nav__primary", "usa-nav__primary-item", "usa-search"],
+    "expected_elements": ["header", "nav", "a", "button", "form", "input"],
+    "expected_aria": ["aria-label", "role"]
+  },
+  {
+    "id": "07_data_table",
+    "name": "Data Table",
+    "difficulty": "medium",
+    "prompt": "Generate HTML for a USWDS bordered and striped data table with 5 columns (Name, Email, Role, Status, Actions) and 4 rows of sample data. The Status column should use USWDS Tag components. Include proper table header scope attributes. Use USWDS table CSS classes.",
+    "expected_classes": ["usa-table", "usa-table--bordered", "usa-table--striped", "usa-tag"],
+    "expected_elements": ["table", "thead", "tbody", "tr", "th", "td", "span"],
+    "expected_aria": ["scope"]
+  },
+  {
+    "id": "08_two_col_layout",
+    "name": "Two-Column Sidebar Layout",
+    "difficulty": "medium",
+    "prompt": "Generate HTML for a USWDS two-column layout with a side navigation on the left (3 columns wide on desktop) and main content area on the right (9 columns wide on desktop). The side nav should have 5 items with one marked as current. The main content should have a heading, paragraph text, and an info alert. On mobile, both should be full-width. Use the USWDS grid system and sidenav classes.",
+    "expected_classes": ["grid-container", "grid-row", "grid-gap", "usa-sidenav", "usa-current", "usa-alert", "usa-alert--info"],
+    "expected_elements": ["div", "nav", "a", "main", "h1", "p"],
+    "expected_aria": ["aria-label", "aria-current"]
+  },
+  {
+    "id": "09_step_indicator_form",
+    "name": "Multi-Step Form with Step Indicator",
+    "difficulty": "hard",
+    "prompt": "Generate HTML for a USWDS multi-step form page showing step 2 of 4 (Personal Info, Address, Review, Confirm). Include a step indicator at the top showing the current progress, and a form below for the Address step with fields for: street address, apartment/suite (optional), city, state (select), and ZIP code. Include a button group with 'Back' (outline) and 'Continue' (primary) buttons. Use USWDS step indicator, form, and grid classes.",
+    "expected_classes": ["usa-step-indicator", "usa-step-indicator__segment", "usa-step-indicator__segment--complete", "usa-step-indicator__segment--current", "usa-form", "usa-fieldset", "usa-label", "usa-input", "usa-select", "usa-button", "usa-button--outline", "usa-button-group", "grid-row", "grid-col"],
+    "expected_elements": ["div", "form", "fieldset", "legend", "label", "input", "select", "button", "ol", "li"],
+    "expected_aria": ["aria-label"]
+  },
+  {
+    "id": "10_full_page",
+    "name": "Complete Government Page",
+    "difficulty": "hard",
+    "prompt": "Generate a complete HTML page for a U.S. government agency website. Include: (1) a government banner at the very top, (2) a basic header with agency name and primary navigation with 4 items, (3) a hero section with a heading and call-to-action button using USWDS utility classes, (4) a main content area with a 3-column card grid containing 3 cards with headings and descriptions, (5) a medium footer with navigation links and agency contact information. Use USWDS components, grid system, utility classes, and ensure accessibility best practices.",
+    "expected_classes": ["usa-banner", "usa-header", "usa-nav", "usa-card", "usa-card-group", "usa-footer", "grid-container", "grid-row", "usa-button"],
+    "expected_elements": ["header", "nav", "main", "section", "footer", "h1", "h2", "h3", "a", "button", "p"],
+    "expected_aria": ["aria-label", "role"]
+  }
+]
