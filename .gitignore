@@ -8,6 +8,7 @@ venv/
 # Generated HTML outputs (large, reproducible)
 results/with_skills/
 results/without_skills/
+results/with_custom_skill/
 
 # Run metadata (large, reproducible)
 results/run_*.json

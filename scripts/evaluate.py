@@ -294,12 +294,15 @@ def evaluate_run(run_file: Path) -> dict:
         run_meta = json.load(f)
 
     tasks = load_tasks()
-    evaluations = {"with_skills": [], "without_skills": []}
+    evaluations = {"with_skills": [], "without_skills": [], "with_custom_skill": []}
 
     for result in run_meta["results"]:
         task_id = result["task_id"]
         condition = result["condition"]
         html_file = PROJECT_ROOT / result["html_file"]
+
+        if condition not in evaluations:
+            evaluations[condition] = []
 
         if not html_file.exists():
             print(f"  WARNING: {html_file} not found, skipping")
@@ -328,8 +331,8 @@ def compute_summary(evaluations: dict, run_meta: dict) -> dict:
 
     summary = {"run_id": run_meta["run_id"], "model": run_meta["model"]}
 
-    for condition in ["without_skills", "with_skills"]:
-        evals = evaluations[condition]
+    for condition in ["without_skills", "with_skills", "with_custom_skill"]:
+        evals = evaluations.get(condition, [])
         if not evals:
             continue
 
@@ -358,6 +361,16 @@ def compute_summary(evaluations: dict, run_meta: dict) -> dict:
             "accessibility": round(ws["avg_accessibility"] - ns["avg_accessibility"], 3),
         }
 
+    if "with_custom_skill" in summary and "without_skills" in summary:
+        cs = summary["with_custom_skill"]
+        ns = summary["without_skills"]
+        summary["deltas_custom"] = {
+            "composite": round(cs["avg_composite"] - ns["avg_composite"], 3),
+            "uswds_classes": round(cs["avg_uswds_classes"] - ns["avg_uswds_classes"], 3),
+            "html_structure": round(cs["avg_html_structure"] - ns["avg_html_structure"], 3),
+            "accessibility": round(cs["avg_accessibility"] - ns["avg_accessibility"], 3),
+        }
+
     summary["evaluations"] = evaluations
     return summary
 
@@ -370,11 +383,16 @@ def print_report(summary: dict):
     print(f"Run ID: {summary['run_id']}")
     print(f"Model:  {summary['model']}")
 
-    for condition in ["without_skills", "with_skills"]:
+    for condition in ["without_skills", "with_skills", "with_custom_skill"]:
         if condition not in summary:
             continue
         data = summary[condition]
-        label = "WITHOUT Skills" if condition == "without_skills" else "WITH Skills"
+        labels = {
+            "without_skills": "WITHOUT Skills",
+            "with_skills": "WITH Skills (full)",
+            "with_custom_skill": "WITH CUSTOM Skill (targeted)",
+        }
+        label = labels.get(condition, condition)
         print(f"\n{'─'*70}")
         print(f"  {label}")
         print(f"{'─'*70}")
@@ -390,9 +408,17 @@ def print_report(summary: dict):
 
     if "deltas" in summary:
         print(f"\n{'─'*70}")
-        print(f"  IMPROVEMENT (with_skills - without_skills)")
+        print(f"  IMPROVEMENT: full skills vs no skills")
         print(f"{'─'*70}")
         for metric, delta in summary["deltas"].items():
+            direction = "↑" if delta > 0 else "↓" if delta < 0 else "─"
+            print(f"  {direction} {metric:.<40s} {delta:+.3f}")
+
+    if "deltas_custom" in summary:
+        print(f"\n{'─'*70}")
+        print(f"  IMPROVEMENT: custom skill vs no skills")
+        print(f"{'─'*70}")
+        for metric, delta in summary["deltas_custom"].items():
             direction = "↑" if delta > 0 else "↓" if delta < 0 else "─"
             print(f"  {direction} {metric:.<40s} {delta:+.3f}")
 

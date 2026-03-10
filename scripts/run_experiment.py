@@ -19,7 +19,7 @@ from pathlib import Path
 
 import requests
 
-from skills_context import build_skills_context, build_condensed_context
+from skills_context import build_skills_context, build_condensed_context, build_custom_context
 
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -154,7 +154,8 @@ def run_single_task(
     }
 
 
-def run_experiment(model: str, tasks: list[dict], use_condensed: bool = False) -> dict:
+def run_experiment(model: str, tasks: list[dict], use_condensed: bool = False,
+                   include_custom: bool = False) -> dict:
     """Run the full experiment: all tasks with and without skills context."""
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     run_id = f"{model.replace(':', '_').replace('/', '_')}_{timestamp}"
@@ -165,6 +166,10 @@ def run_experiment(model: str, tasks: list[dict], use_condensed: bool = False) -
     without_dir.mkdir(parents=True, exist_ok=True)
     with_dir.mkdir(parents=True, exist_ok=True)
 
+    if include_custom:
+        custom_dir = RESULTS_DIR / "with_custom_skill" / run_id
+        custom_dir.mkdir(parents=True, exist_ok=True)
+
     # Build skills context
     if use_condensed:
         skills_ctx = build_condensed_context()
@@ -174,6 +179,13 @@ def run_experiment(model: str, tasks: list[dict], use_condensed: bool = False) -
         print(f"Using full skills context ({len(skills_ctx):,} chars)")
 
     system_with_skills = SYSTEM_PROMPT_WITH_SKILLS.format(skills_context=skills_ctx)
+
+    custom_ctx = None
+    system_with_custom = None
+    if include_custom:
+        custom_ctx = build_custom_context()
+        system_with_custom = SYSTEM_PROMPT_WITH_SKILLS.format(skills_context=custom_ctx)
+        print(f"Using custom skill context ({len(custom_ctx):,} chars)")
 
     all_results = []
 
@@ -193,6 +205,15 @@ def run_experiment(model: str, tasks: list[dict], use_condensed: bool = False) -
         result = run_single_task(model, task, "with_skills", system_with_skills, with_dir)
         all_results.append(result)
 
+    # Run WITH CUSTOM SKILL (if enabled)
+    if include_custom:
+        print(f"\n{'='*60}")
+        print(f"CONDITION: WITH CUSTOM SKILL")
+        print(f"{'='*60}")
+        for task in tasks:
+            result = run_single_task(model, task, "with_custom_skill", system_with_custom, custom_dir)
+            all_results.append(result)
+
     # Save run metadata
     run_meta = {
         "run_id": run_id,
@@ -201,6 +222,8 @@ def run_experiment(model: str, tasks: list[dict], use_condensed: bool = False) -
         "num_tasks": len(tasks),
         "skills_context_mode": "condensed" if use_condensed else "full",
         "skills_context_chars": len(skills_ctx),
+        "custom_skill_chars": len(custom_ctx) if custom_ctx else 0,
+        "include_custom": include_custom,
         "results": all_results,
     }
 
@@ -235,11 +258,18 @@ def main():
         default="both",
         help="Which condition(s) to run (default: both)",
     )
+    parser.add_argument(
+        "--custom-skill",
+        action="store_true",
+        help="Include a third condition using the custom targeted skill file",
+    )
     args = parser.parse_args()
 
     print(f"USWDS Skills Experiment")
     print(f"Model: {args.model}")
     print(f"Ollama API: {OLLAMA_API}")
+    if args.custom_skill:
+        print(f"Custom skill: ENABLED")
     print()
 
     # Check Ollama connectivity
@@ -256,7 +286,8 @@ def main():
     print(f"Tasks to run: {len(tasks)}")
 
     # Run experiment
-    run_meta = run_experiment(args.model, tasks, use_condensed=args.condensed)
+    run_meta = run_experiment(args.model, tasks, use_condensed=args.condensed,
+                              include_custom=args.custom_skill)
 
     # Print summary
     print(f"\n{'='*60}")

@@ -43,6 +43,11 @@ def main():
         nargs="*",
         help="Specific task IDs to run (default: all)",
     )
+    parser.add_argument(
+        "--custom-skill",
+        action="store_true",
+        help="Include a third condition using the custom targeted skill file",
+    )
     args = parser.parse_args()
 
     print(f"Full Experiment Pipeline")
@@ -67,7 +72,8 @@ def main():
     print(f"\n{'#'*60}")
     print(f"STEP 1: GENERATION")
     print(f"{'#'*60}")
-    run_meta = run_experiment(args.model, tasks, use_condensed=args.condensed)
+    run_meta = run_experiment(args.model, tasks, use_condensed=args.condensed,
+                              include_custom=args.custom_skill)
 
     # Step 2: Evaluate
     print(f"\n{'#'*60}")

@@ -29,11 +29,16 @@ def print_comparison(evals: list[dict]):
 
     for ev in evals:
         model = ev.get("model", "unknown")
-        for condition in ["without_skills", "with_skills"]:
+        for condition in ["without_skills", "with_skills", "with_custom_skill"]:
             if condition not in ev:
                 continue
             data = ev[condition]
-            label = "without skills" if condition == "without_skills" else "WITH SKILLS"
+            labels = {
+                "without_skills": "without skills",
+                "with_skills": "WITH SKILLS",
+                "with_custom_skill": "CUSTOM SKILL",
+            }
+            label = labels.get(condition, condition)
             print(
                 f"{model:<30s} {label:<18s} "
                 f"{data['avg_composite']:>10.3f} "
@@ -45,7 +50,16 @@ def print_comparison(evals: list[dict]):
         if "deltas" in ev:
             d = ev["deltas"]
             print(
-                f"{'':.<30s} {'DELTA':.<18s} "
+                f"{'':.<30s} {'Δ full skills':.<18s} "
+                f"{d['composite']:>+10.3f} "
+                f"{d['uswds_classes']:>+10.3f} "
+                f"{d['html_structure']:>+10.3f} "
+                f"{d['accessibility']:>+10.3f}"
+            )
+        if "deltas_custom" in ev:
+            d = ev["deltas_custom"]
+            print(
+                f"{'':.<30s} {'Δ custom skill':.<18s} "
                 f"{d['composite']:>+10.3f} "
                 f"{d['uswds_classes']:>+10.3f} "
                 f"{d['html_structure']:>+10.3f} "
@@ -61,10 +75,15 @@ def print_comparison(evals: list[dict]):
     for ev in evals:
         model = ev.get("model", "unknown")
         print(f"\n  {model}")
-        for condition in ["without_skills", "with_skills"]:
+        for condition in ["without_skills", "with_skills", "with_custom_skill"]:
             if condition not in ev:
                 continue
-            label = "without" if condition == "without_skills" else "WITH"
+            labels = {
+                "without_skills": "without",
+                "with_skills": "WITH",
+                "with_custom_skill": "CUSTOM",
+            }
+            label = labels.get(condition, condition)
             tasks = ev[condition].get("per_task", [])
 
             by_difficulty = {}

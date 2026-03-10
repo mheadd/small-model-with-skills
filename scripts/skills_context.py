@@ -10,6 +10,7 @@ from pathlib import Path
 
 
 SKILLS_DIR = Path(__file__).parent.parent / "skills" / "blencorp-skills" / "uswds"
+CUSTOM_SKILL_FILE = Path(__file__).parent.parent / "skills" / "custom" / "uswds-targeted.md"
 
 
 def load_skill_file(filepath: Path) -> str:
@@ -68,15 +69,30 @@ def build_condensed_context() -> str:
     return "\n\n---\n\n".join(sections)
 
 
+def build_custom_context() -> str:
+    """
+    Build a targeted skills context from the custom skill file.
+    This is a data-driven skill file created from weakness analysis of
+    qwen2.5-coder:7b outputs, focusing on the specific USWDS patterns
+    the model gets wrong most often.
+    """
+    if CUSTOM_SKILL_FILE.exists():
+        return load_skill_file(CUSTOM_SKILL_FILE)
+    return ""
+
+
 def get_context_stats() -> dict:
     """Return character and approximate token counts for the skills context."""
     full = build_skills_context()
     condensed = build_condensed_context()
+    custom = build_custom_context()
     return {
         "full_chars": len(full),
         "full_approx_tokens": len(full) // 4,
         "condensed_chars": len(condensed),
         "condensed_approx_tokens": len(condensed) // 4,
+        "custom_chars": len(custom),
+        "custom_approx_tokens": len(custom) // 4,
     }
 
 
@@ -85,3 +101,4 @@ if __name__ == "__main__":
     print("Skills Context Statistics:")
     print(f"  Full context:      {stats['full_chars']:,} chars (~{stats['full_approx_tokens']:,} tokens)")
     print(f"  Condensed context: {stats['condensed_chars']:,} chars (~{stats['condensed_approx_tokens']:,} tokens)")
+    print(f"  Custom context:    {stats['custom_chars']:,} chars (~{stats['custom_approx_tokens']:,} tokens)")

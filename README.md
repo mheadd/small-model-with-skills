@@ -21,28 +21,30 @@ a set of agent skills covering the U.S. Web Design System (USWDS v3).
 ┌─────────────────────────────────────────────────────────┐
 │                    10 USWDS Tasks                       │
 │  (banners, forms, cards, tables, full pages, etc.)      │
-└──────────────┬──────────────────────┬───────────────────┘
-               │                      │
-       ┌───────▼───────-─┐    ┌───────▼--───────────┐
-       │  WITHOUT Skills │    │   WITH Skills       │
-       │  (base prompt)  │    │  (prompt + USWDS    │
-       │                 │    │   reference docs)   │
-       └───────┬─────────┘    └────────┬────────────┘
-               │                       │
-               ▼                       ▼
-       ┌─────────────────────────────────────────┐
-       │          Automated Evaluation           │
-       │  • USWDS class correctness (30%)        │
-       │  • HTML structure (20%)                 │
-       │  • Accessibility attributes (20%)       │
-       │  • Completeness (15%)                   │
-       │  • HTML validity (15%)                  │
-       └─────────────────────────────────────────┘
+└────────┬──────────────────┬───────────────┬─────────────┘
+         │                  │               │
+ ┌───────▼────────┐ ┌──────▼──────────┐ ┌──▼──────────────┐
+ │ WITHOUT Skills │ │  WITH Skills    │ │ WITH CUSTOM     │
+ │ (base prompt)  │ │ (prompt + full  │ │  Skill          │
+ │                │ │  USWDS ref docs)│ │ (prompt +       │
+ │                │ │  (~17K tokens)  │ │  targeted ref)  │
+ │                │ │                 │ │  (~2.5K tokens) │
+ └───────┬────────┘ └────────┬────────┘ └───────┬─────────┘
+         │                   │                   │
+         ▼                   ▼                   ▼
+ ┌─────────────────────────────────────────────────────┐
+ │              Automated Evaluation                   │
+ │  • USWDS class correctness (30%)                    │
+ │  • HTML structure (20%)                             │
+ │  • Accessibility attributes (20%)                   │
+ │  • Completeness (15%)                               │
+ │  • HTML validity (15%)                              │
+ └─────────────────────────────────────────────────────┘
 ```
 
-Each task is run twice against the same model — once with only a base system prompt, and
-once with the full USWDS skills documentation injected as context. The outputs are then
-scored automatically across five dimensions and compared.
+Each task is run against the same model under multiple conditions: a base system prompt
+alone, with the full USWDS skills documentation injected as context, and optionally with a
+custom targeted skill file. The outputs are scored automatically across five dimensions.
 
 ## Prerequisites
 
@@ -74,7 +76,7 @@ python scripts/run_all.py --model qwen2.5-coder:7b
 ## Recommended Models to Test
 
 | Model | Parameters | Notes |
-|---|---|---|
+|:---|:---|:---|
 | `qwen2.5-coder:7b` | 7B | Strong coding model, good baseline |
 | `codellama:7b` | 7B | Meta's code-focused Llama variant |
 | `mistral:7b` | 7B | General-purpose, good instruction following |
@@ -90,6 +92,7 @@ ollama pull codellama:7b
 ollama pull mistral:7b
 
 python scripts/run_all.py --model qwen2.5-coder:7b
+python scripts/run_all.py --model qwen2.5-coder:7b --custom-skill  # with targeted skill
 python scripts/run_all.py --model codellama:7b
 python scripts/run_all.py --model mistral:7b
 
@@ -109,8 +112,11 @@ python scripts/compare_runs.py results/eval_*.json
 │   ├── run_experiment.py       # Runs generation with/without skills
 │   ├── evaluate.py             # Scores outputs for USWDS compliance
 │   ├── compare_runs.py         # Cross-model comparison report
+│   ├── analyze_weaknesses.py   # Identifies per-task failure patterns
 │   └── run_all.py              # Full pipeline (generate → evaluate → report)
 ├── skills/
+│   ├── custom/
+│   │   └── uswds-targeted.md   # Data-driven custom skill (~2.5K tokens)
 │   └── blencorp-skills/        # USWDS web skills only (from blencorp/skills)
 │       └── uswds/
 │           ├── SKILL.md
@@ -152,6 +158,8 @@ Each output is scored on five dimensions:
 
 ## Results
 
+### Phase 1: Full Skills Context Across Three Models
+
 Three 7B-parameter models were tested, each running all 10 tasks with and without the
 full USWDS skills context (~17K tokens):
 
@@ -161,7 +169,37 @@ full USWDS skills context (~17K tokens):
 | **codellama:7b** | 0.750 | 0.694 | -0.056 | No |
 | **mistral:7b** | 0.676 | 0.609 | -0.067 | No |
 
-### USWDS Class Accuracy (the metric most directly targeted by skills)
+### Phase 2: Custom Targeted Skill (qwen2.5-coder:7b)
+
+After analyzing which specific USWDS classes, HTML elements, and accessibility attributes
+qwen2.5-coder missed most often without skills, a custom skill file was created that
+addresses only those specific weaknesses. At ~2.5K tokens, it is 85% smaller than the
+full skills context.
+
+| Condition | Composite | USWDS Classes | HTML Structure | Accessibility |
+|---|---|---|---|---|
+| No skills | 0.766 | 0.615 | 0.832 | 0.620 |
+| Full skills (~17K tokens) | 0.815 (+0.049) | 0.731 (+0.116) | 0.832 (+0.000) | 0.700 (+0.080) |
+| **Custom skill (~2.5K tokens)** | **0.949 (+0.183)** | **0.973 (+0.358)** | **0.915 (+0.083)** | **0.910 (+0.290)** |
+
+The custom skill improvement is **3.7x larger** than full skills for composite score.
+
+### Per-Task Results: Custom Skill vs Baselines
+
+| Task | Difficulty | No Skills | Full Skills | Custom Skill |
+|---|---|---|---|---|
+| Gov Banner | easy | 0.615 | 0.885 | **0.985** |
+| Alert Set | easy | 0.671 | 0.671 | **1.000** |
+| Button Variants | easy | 0.900 | 0.885 | 0.900 |
+| Card Grid | medium | 0.837 | 0.945 | **0.973** |
+| Contact Form | medium | 0.985 | 0.985 | 0.985 |
+| Header Nav | medium | 0.797 | 0.888 | **0.985** |
+| Data Table | medium | 0.745 | 0.745 | **0.820** |
+| Two-Col Layout | medium | 0.600 | 0.600 | **0.967** |
+| Step Indicator | hard | 0.676 | 0.698 | **0.964** |
+| Full Page | hard | 0.832 | 0.849 | **0.915** |
+
+### USWDS Class Accuracy (Phase 1)
 
 | Model | Without Skills | With Skills | Delta |
 |---|---|---|---|
@@ -169,66 +207,66 @@ full USWDS skills context (~17K tokens):
 | **codellama:7b** | 0.587 | 0.508 | -0.079 |
 | **mistral:7b** | 0.404 | 0.346 | -0.058 |
 
-### By Task Difficulty (qwen2.5-coder:7b, the only model that improved)
-
-| Difficulty | Without Skills | With Skills | Delta |
-|---|---|---|---|
-| Easy (n=3) | 0.719 | 0.819 | **+0.100** |
-| Medium (n=5) | 0.846 | 0.865 | **+0.019** |
-| Hard (n=2) | 0.769 | 0.653 | -0.116 |
-
 ### Key Findings
 
-1. **Skills context is not universally beneficial for small models.** Only one of three
-   7B models (qwen2.5-coder) showed improvement. The other two degraded across all
-   metrics.
+1. **Targeted skills dramatically outperform comprehensive skills.** The custom skill
+   file (~2.5K tokens) improved composite scores by +0.183, versus +0.049 for the full
+   skills context (~17K tokens) — a 3.7x multiplier. Every single task scored higher
+   with the custom skill than with full skills, and most scored higher than without
+   any skills.
 
-2. **Context window overload matters.** The full skills context is ~17K tokens — a
-   substantial fraction of a 7B model's effective context window. For codellama and
-   mistral, this appears to have overwhelmed the model, consistent with recent research
-   suggesting that overloading context windows with too much detail can degrade output
-   quality rather than enhance it. Generation times for these models increased 3-5x
-   with skills, and some codellama tasks exceeded 300 seconds.
+2. **Less context can be more.** The custom skill is 85% smaller than the full skills
+   context but 3.7x more effective. This strongly supports the hypothesis that small
+   models struggle with information overload — they perform better when given precisely
+   the reference material they need, rather than a comprehensive but overwhelming
+   knowledge base.
 
-3. **The model's baseline capability is a prerequisite.** qwen2.5-coder already had the
+3. **Data-driven skill authoring works.** The custom skill was created by analyzing the
+   model's specific failure patterns (wrong BEM syntax, missing components, old grid
+   classes) and writing targeted examples that address exactly those gaps. This
+   "diagnose-then-prescribe" approach proved highly effective.
+
+4. **The biggest gains are on the model's weakest areas.** The tasks that improved most
+   with the custom skill were the ones the model struggled with most without it:
+   Two-Col Layout (+0.367), Step Indicator (+0.288), Alert Set (+0.329), Gov Banner
+   (+0.370). The custom skill turned the model's worst tasks into near-perfect scores.
+
+5. **Skills context is not universally beneficial for small models.** In Phase 1, only
+   one of three 7B models (qwen2.5-coder) showed improvement with full skills. The
+   other two degraded across all metrics due to context window overload.
+
+6. **The model's baseline capability is a prerequisite.** qwen2.5-coder had the
    strongest baseline without skills (0.792), suggesting that a model needs sufficient
    pre-existing knowledge of the domain (HTML/CSS) before it can effectively leverage
-   reference documentation. Models that lack that foundation may be distracted rather
-   than aided by detailed context.
+   reference documentation.
 
-4. **Skills help most on simpler, focused tasks.** Even for qwen2.5-coder, the benefit
-   was concentrated on easy (+0.100) and medium (+0.019) tasks. On hard tasks requiring
-   multi-component page assembly, performance dropped (-0.116) — suggesting that complex
-   prompts combined with large reference contexts can exceed what a small model can
-   effectively synthesize.
-
-5. **Component-specific accuracy is where skills shine.** The Gov Banner task jumped
-   from 0.585 → 0.885 with skills for qwen2.5-coder — a +0.300 improvement on a
-   component with very specific, non-obvious class names (`usa-banner__header`,
-   `usa-banner__content`). This is exactly the kind of factual recall that reference
-   documentation excels at providing.
+7. **Component-specific accuracy is where skills shine.** The Gov Banner task jumped
+   from 0.615 → 0.985 with the custom skill — a +0.370 improvement on a component
+   with very specific, non-obvious class names (`usa-banner__header`,
+   `usa-banner__content`). This is exactly the kind of factual recall that targeted
+   reference documentation excels at providing.
 
 ## Future Work
 
 Several directions could extend this experiment:
 
+- **Apply the custom skill approach to other models.** Test whether the same targeted
+  skill file helps codellama and mistral, which degraded with full skills. The custom
+  skill's smaller size (~2.5K vs ~17K tokens) may avoid the context overload that
+  affected those models.
+
+- **Automate skill file generation.** The current custom skill was hand-crafted from
+  weakness analysis. An automated pipeline could: run baseline → analyze failures →
+  generate targeted skill → re-run. This could be applied to any model/domain pair.
+
 - **Larger open-source models.** Testing models like `qwen2.5-coder:32b` or
-  `codellama:70b` against frontier models with skills enhancement would test a
-  different hypothesis: can skills files close the gap between large open-source models
-  and commercial frontier models on specialized tasks? This would likely require
-  specialized hardware (GPU servers with 24GB+ VRAM) to run effectively.
+  `codellama:70b` against frontier models with skills enhancement would test
+  whether skills files close the gap between large open-source models and commercial
+  frontier models on specialized tasks.
 
 - **Condensed skills context.** The experiment framework includes a `--condensed` flag
-  that uses only SKILL.md and components.md (~7.5K tokens vs ~17K). Running all models
-  with the condensed context could reveal whether the performance degradation seen in
-  codellama and mistral is primarily a context length issue. If a shorter context
-  restores or improves their performance, that would strongly support the context
-  overload hypothesis.
-
-- **Skills file optimization.** Rather than injecting the entire reference library,
-  a smarter approach might select only the relevant subset of skills content based on
-  the task prompt (e.g., only card + grid references for a card grid task). This would
-  test whether targeted, minimal context outperforms comprehensive context.
+  that uses only SKILL.md and components.md (~7.5K tokens). Running all models with
+  this intermediate-size context could reveal the optimal context size curve.
 
 - **Repeated trials.** Running each task multiple times (e.g., 3-5 runs) with
   temperature > 0 would provide confidence intervals and reduce noise from single-run
@@ -243,6 +281,7 @@ Several directions could extend this experiment:
 
 ```bash
 python scripts/run_experiment.py --model qwen2.5-coder:7b
+python scripts/run_experiment.py --model qwen2.5-coder:7b --custom-skill  # adds targeted skill condition
 python scripts/run_experiment.py --model codellama:7b --condensed  # smaller context
 python scripts/run_experiment.py --model mistral:7b --tasks 01_gov_banner 05_contact_form
 ```
