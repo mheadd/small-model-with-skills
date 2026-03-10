@@ -81,6 +81,8 @@ python scripts/run_all.py --model qwen2.5-coder:7b
 
 ## Recommended Models to Test
 
+(Note - results for `qwen2.5-coder:7b`, `codellama:7b`, and `mistral:7b` are all included in the [FINDINGS.md](FINDINGS.md) document)
+
 | Model | Parameters | Notes |
 |:---|:---|:---|
 | `qwen2.5-coder:7b` | 7B | Strong coding model, good baseline |

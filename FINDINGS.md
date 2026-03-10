@@ -45,8 +45,7 @@ skills context (~17K tokens):
 | **qwen2.5-coder:7b** | 0.792 | 0.809 | **+0.017** | **Yes** |
 | **codellama:7b** | 0.750 | 0.694 | -0.056 | No |
 | **mistral:7b** | 0.676 | 0.609 | -0.067 | No |
-
-Note - results are simple averages (mean) of the per-task composite scores across all 10 tasks.
+(Note - results are simple averages (mean) of the per-task composite scores across all 10 tasks.)
 
 The composite scores above blend all five evaluation dimensions. Breaking out USWDS
 class accuracy alone — the single dimension most directly affected by skills context,
