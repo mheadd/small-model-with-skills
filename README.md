@@ -15,7 +15,7 @@ finding in the domain of government web development.
 This experiment uses the USWDS skills from [blencorp/skills](https://github.com/blencorp/skills)
 as a starting point — a comprehensive set of agent skills covering the U.S. Web Design
 System (USWDS v3). These skills are well-suited for use with larger or frontier models
-that can effectively process their full ~17K-token context. However, our experiments
+that can effectively process their full ~17K-token context. However, the experiments
 revealed that smaller 7B-parameter models struggle with that volume of reference material.
 This led us to develop a custom, narrowly focused skill file derived from analyzing the
 model's specific weaknesses — an approach that proved dramatically more effective for
