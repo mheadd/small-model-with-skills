@@ -23,13 +23,13 @@ a set of agent skills covering the U.S. Web Design System (USWDS v3).
 │  (banners, forms, cards, tables, full pages, etc.)      │
 └────────┬──────────────────┬───────────────┬─────────────┘
          │                  │               │
- ┌───────▼────────┐ ┌──────▼──────────┐ ┌──▼──────────────┐
+ ┌───────▼────────┐ ┌───-───▼─────────┐ ┌──-▼─────────────┐
  │ WITHOUT Skills │ │  WITH Skills    │ │ WITH CUSTOM     │
  │ (base prompt)  │ │ (prompt + full  │ │  Skill          │
  │                │ │  USWDS ref docs)│ │ (prompt +       │
  │                │ │  (~17K tokens)  │ │  targeted ref)  │
  │                │ │                 │ │  (~2.5K tokens) │
- └───────┬────────┘ └────────┬────────┘ └───────┬─────────┘
+ └───────┬────────┘ └────────┬────────┘ └───────-┬────────┘
          │                   │                   │
          ▼                   ▼                   ▼
  ┌─────────────────────────────────────────────────────┐
