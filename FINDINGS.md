@@ -1,5 +1,11 @@
 # Findings
 
+Context and instruction files used with small open-source models need to be custom tailored
+for those models and designed to accomodate their more constrained context window. Instruction files designed for larger models or commercial frontier models will very likely not work well with small models — and may actually *diminish* performance.
+But on the upside, customized instruction files for smaller open-source models can
+dramatically improve the quality of their output, potentially making them a viable
+alternative to larger or commercial offerings for specialized tasks.
+
 ## Overview
 
 This experiment used the comprehensive USWDS skills from
