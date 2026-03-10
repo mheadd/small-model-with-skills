@@ -1,0 +1,3978 @@
+{
+  "run_id": "mistral_7b_20260310_182206",
+  "model": "mistral:7b",
+  "without_skills": {
+    "num_tasks": 10,
+    "avg_composite": 0.676,
+    "avg_uswds_classes": 0.404,
+    "avg_html_structure": 0.776,
+    "avg_accessibility": 0.615,
+    "per_task": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.485,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.667,
+            "found": [
+              "usa-banner",
+              "usa-banner__content"
+            ],
+            "missing": [
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "usa-banner",
+              "usa-banner--call-to-action",
+              "usa-banner--govwide",
+              "usa-banner__content",
+              "usa-banner__description",
+              "usa-banner__title"
+            ]
+          },
+          "html_structure": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "header",
+              "section"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.0,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.647,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-alert",
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.885,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--inverse-dark",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled",
+              "usa-grid",
+              "usa-grid-row",
+              "usa-width-one-quarter"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.705,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.182,
+            "found": [
+              "grid-container",
+              "usa-button"
+            ],
+            "missing": [
+              "grid-col-12",
+              "grid-row",
+              "usa-card",
+              "usa-card-group",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "extra_uswds_classes": [
+              "grid-container",
+              "grid-margin-x",
+              "grid-x",
+              "usa-button"
+            ]
+          },
+          "html_structure": {
+            "score": 0.75,
+            "found": [
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [
+              "button"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.948,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.875,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [
+              "usa-label"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--primary",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-form-group--no-margin-bottom",
+              "usa-input",
+              "usa-input--wide",
+              "usa-legend",
+              "usa-select",
+              "usa-select--wide",
+              "usa-sr-only",
+              "usa-textarea",
+              "usa-textarea--large"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-required"
+            ],
+            "bonus_details": [
+              "additional ARIA: ['aria-required']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.748,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.375,
+            "found": [
+              "usa-header",
+              "usa-nav",
+              "usa-navbar"
+            ],
+            "missing": [
+              "usa-header--basic",
+              "usa-logo",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-search"
+            ],
+            "extra_uswds_classes": [
+              "usa-brand__logo",
+              "usa-brand__text",
+              "usa-button",
+              "usa-button--primary",
+              "usa-button--search",
+              "usa-header",
+              "usa-header__brand",
+              "usa-header__container",
+              "usa-icon",
+              "usa-icon--nav",
+              "usa-input",
+              "usa-input--search",
+              "usa-nav",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-navbar",
+              "usa-navbar--expand-right",
+              "usa-navbar__brand",
+              "usa-navbar__container",
+              "usa-navbar__content",
+              "usa-navbar__heading",
+              "usa-navbar__toggler",
+              "usa-search-header",
+              "usa-search-header__form",
+              "usa-search-header__search"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "button",
+              "form",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.75,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "aria-labelledby"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded', 'aria-labelledby']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'div', 'a', 'div', 'form', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.651,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.5,
+            "found": [
+              "usa-table",
+              "usa-table--striped"
+            ],
+            "missing": [
+              "usa-table--bordered",
+              "usa-tag"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--secondary",
+              "usa-button--small",
+              "usa-table",
+              "usa-table--striped"
+            ]
+          },
+          "html_structure": {
+            "score": 0.857,
+            "found": [
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [
+              "span"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.15,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [
+              "aria-describedby"
+            ],
+            "bonus_details": [
+              "table scope attributes",
+              "additional ARIA: ['aria-describedby']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.434,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "grid-container",
+              "grid-gap",
+              "grid-row",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "main"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.647,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "grid-col",
+              "grid-row",
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "div",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "li",
+              "ol",
+              "select"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'div', 'main', 'div', 'div', 'div', 'form', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.612,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.444,
+            "found": [
+              "usa-banner",
+              "usa-button",
+              "usa-footer",
+              "usa-nav"
+            ],
+            "missing": [
+              "grid-container",
+              "grid-row",
+              "usa-card",
+              "usa-card-group",
+              "usa-header"
+            ],
+            "extra_uswds_classes": [
+              "usa-banner",
+              "usa-banner--call-to-action",
+              "usa-banner__content",
+              "usa-banner__title",
+              "usa-button",
+              "usa-button--primary",
+              "usa-button-group",
+              "usa-footer",
+              "usa-footer__contact",
+              "usa-grid",
+              "usa-grid--cols-3",
+              "usa-grid--row-gutter",
+              "usa-grid-item",
+              "usa-hero",
+              "usa-hero--reverse",
+              "usa-hero__content",
+              "usa-hero__headline",
+              "usa-icon-nav-icon",
+              "usa-nav",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-nav__list",
+              "usa-navbar",
+              "usa-navbar--expand-content",
+              "usa-navbar__brand",
+              "usa-navbar__collapse",
+              "usa-navbar__container",
+              "usa-navbar__toggle",
+              "usa-navbar__toggle-icon",
+              "usa-width-one-whole"
+            ]
+          },
+          "html_structure": {
+            "score": 0.818,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h3",
+              "main",
+              "nav",
+              "p",
+              "section"
+            ],
+            "missing": [
+              "h2",
+              "header"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "main",
+              "nav",
+              "section"
+            ]
+          },
+          "accessibility": {
+            "score": 0.15,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label",
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-expanded"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-expanded']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/10_full_page.html"
+      }
+    ]
+  },
+  "with_skills": {
+    "num_tasks": 10,
+    "avg_composite": 0.609,
+    "avg_uswds_classes": 0.346,
+    "avg_html_structure": 0.67,
+    "avg_accessibility": 0.49,
+    "per_task": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.385,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.333,
+            "found": [
+              "usa-banner"
+            ],
+            "missing": [
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "usa-banner",
+              "usa-banner-content",
+              "usa-banner-description",
+              "usa-banner-gov",
+              "usa-banner-title"
+            ]
+          },
+          "html_structure": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "header",
+              "section"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.0,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.783,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.5,
+            "found": [
+              "usa-alert",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "missing": [
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning"
+            ],
+            "extra_uswds_classes": [
+              "usa-alert",
+              "usa-alert-info",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ]
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.548,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.598,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card-group",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.75,
+            "found": [
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [
+              "button"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.91,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-legend",
+              "usa-textarea"
+            ],
+            "missing": [
+              "usa-label",
+              "usa-select"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-hint",
+              "usa-input",
+              "usa-legend",
+              "usa-sr-only",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-describedby",
+              "aria-required"
+            ],
+            "bonus_details": [
+              "additional ARIA: ['aria-describedby', 'aria-required']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.534,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-search"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "form",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [
+              "button"
+            ],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.6,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'nav', 'div', 'div', 'div', 'div', 'form']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.791,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--secondary",
+              "usa-button--small",
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--error",
+              "usa-tag--info",
+              "usa-tag--success",
+              "usa-tag--warning"
+            ]
+          },
+          "html_structure": {
+            "score": 0.857,
+            "found": [
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [
+              "span"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.401,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "grid-container",
+              "grid-gap",
+              "grid-row",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "h1",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "a",
+              "main"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.554,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.429,
+            "found": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-form",
+              "usa-input",
+              "usa-step-indicator"
+            ],
+            "missing": [
+              "grid-col",
+              "grid-row",
+              "usa-fieldset",
+              "usa-label",
+              "usa-select",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button--primary",
+              "usa-button-group",
+              "usa-form",
+              "usa-form-group",
+              "usa-grid",
+              "usa-grid--full",
+              "usa-grid-row",
+              "usa-heading",
+              "usa-heading--small",
+              "usa-input",
+              "usa-sr-only",
+              "usa-step-indicator",
+              "usa-step-indicator__item",
+              "usa-step-indicator__item--current",
+              "usa-step-indicator__list",
+              "usa-width-one-third",
+              "usa-width-one-whole",
+              "usa-width-two-thirds"
+            ]
+          },
+          "html_structure": {
+            "score": 0.7,
+            "found": [
+              "button",
+              "div",
+              "form",
+              "input",
+              "label",
+              "li",
+              "select"
+            ],
+            "missing": [
+              "fieldset",
+              "legend",
+              "ol"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.0,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'form', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.584,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.444,
+            "found": [
+              "usa-banner",
+              "usa-button",
+              "usa-card",
+              "usa-nav"
+            ],
+            "missing": [
+              "grid-container",
+              "grid-row",
+              "usa-card-group",
+              "usa-footer",
+              "usa-header"
+            ],
+            "extra_uswds_classes": [
+              "usa-banner",
+              "usa-banner--call-to-action",
+              "usa-banner__content",
+              "usa-banner__subtitle",
+              "usa-banner__title",
+              "usa-button",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__text",
+              "usa-card__title",
+              "usa-grid",
+              "usa-grid--fullwidth",
+              "usa-grid--gutters",
+              "usa-grid--wrap",
+              "usa-nav",
+              "usa-nav--footer",
+              "usa-nav--tabs",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-nav__list",
+              "usa-navbar",
+              "usa-navbar--expand",
+              "usa-navbar__brand",
+              "usa-navbar__brand-image",
+              "usa-navbar__brand-link",
+              "usa-navbar__brand-text",
+              "usa-navbar__primary",
+              "usa-u-font-size-small",
+              "usa-u-heading-xx-large",
+              "usa-u-margin-bottom-6",
+              "usa-u-text-center",
+              "usa-width-one-third@m",
+              "usa-width-one-whole"
+            ]
+          },
+          "html_structure": {
+            "score": 0.727,
+            "found": [
+              "a",
+              "footer",
+              "h1",
+              "h3",
+              "header",
+              "nav",
+              "p",
+              "section"
+            ],
+            "missing": [
+              "button",
+              "h2",
+              "main"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "nav",
+              "section"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label",
+              "role"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'div', 'div', 'nav', 'div', 'a']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/10_full_page.html"
+      }
+    ]
+  },
+  "deltas": {
+    "composite": -0.067,
+    "uswds_classes": -0.058,
+    "html_structure": -0.106,
+    "accessibility": -0.125
+  },
+  "evaluations": {
+    "with_skills": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.385,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.333,
+            "found": [
+              "usa-banner"
+            ],
+            "missing": [
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "usa-banner",
+              "usa-banner-content",
+              "usa-banner-description",
+              "usa-banner-gov",
+              "usa-banner-title"
+            ]
+          },
+          "html_structure": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "header",
+              "section"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.0,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.783,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.5,
+            "found": [
+              "usa-alert",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "missing": [
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning"
+            ],
+            "extra_uswds_classes": [
+              "usa-alert",
+              "usa-alert-info",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ]
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.548,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.598,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-card",
+              "usa-card-group",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.75,
+            "found": [
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [
+              "button"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.91,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-legend",
+              "usa-textarea"
+            ],
+            "missing": [
+              "usa-label",
+              "usa-select"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-hint",
+              "usa-input",
+              "usa-legend",
+              "usa-sr-only",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-describedby",
+              "aria-required"
+            ],
+            "bonus_details": [
+              "additional ARIA: ['aria-describedby', 'aria-required']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.534,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-search"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "form",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [
+              "button"
+            ],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.6,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'nav', 'div', 'div', 'div', 'div', 'form']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.791,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--secondary",
+              "usa-button--small",
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--error",
+              "usa-tag--info",
+              "usa-tag--success",
+              "usa-tag--warning"
+            ]
+          },
+          "html_structure": {
+            "score": 0.857,
+            "found": [
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [
+              "span"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.401,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "grid-container",
+              "grid-gap",
+              "grid-row",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "h1",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "a",
+              "main"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.554,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.429,
+            "found": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-form",
+              "usa-input",
+              "usa-step-indicator"
+            ],
+            "missing": [
+              "grid-col",
+              "grid-row",
+              "usa-fieldset",
+              "usa-label",
+              "usa-select",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button--primary",
+              "usa-button-group",
+              "usa-form",
+              "usa-form-group",
+              "usa-grid",
+              "usa-grid--full",
+              "usa-grid-row",
+              "usa-heading",
+              "usa-heading--small",
+              "usa-input",
+              "usa-sr-only",
+              "usa-step-indicator",
+              "usa-step-indicator__item",
+              "usa-step-indicator__item--current",
+              "usa-step-indicator__list",
+              "usa-width-one-third",
+              "usa-width-one-whole",
+              "usa-width-two-thirds"
+            ]
+          },
+          "html_structure": {
+            "score": 0.7,
+            "found": [
+              "button",
+              "div",
+              "form",
+              "input",
+              "label",
+              "li",
+              "select"
+            ],
+            "missing": [
+              "fieldset",
+              "legend",
+              "ol"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.0,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'form', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.584,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.444,
+            "found": [
+              "usa-banner",
+              "usa-button",
+              "usa-card",
+              "usa-nav"
+            ],
+            "missing": [
+              "grid-container",
+              "grid-row",
+              "usa-card-group",
+              "usa-footer",
+              "usa-header"
+            ],
+            "extra_uswds_classes": [
+              "usa-banner",
+              "usa-banner--call-to-action",
+              "usa-banner__content",
+              "usa-banner__subtitle",
+              "usa-banner__title",
+              "usa-button",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-card",
+              "usa-card__body",
+              "usa-card__text",
+              "usa-card__title",
+              "usa-grid",
+              "usa-grid--fullwidth",
+              "usa-grid--gutters",
+              "usa-grid--wrap",
+              "usa-nav",
+              "usa-nav--footer",
+              "usa-nav--tabs",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-nav__list",
+              "usa-navbar",
+              "usa-navbar--expand",
+              "usa-navbar__brand",
+              "usa-navbar__brand-image",
+              "usa-navbar__brand-link",
+              "usa-navbar__brand-text",
+              "usa-navbar__primary",
+              "usa-u-font-size-small",
+              "usa-u-heading-xx-large",
+              "usa-u-margin-bottom-6",
+              "usa-u-text-center",
+              "usa-width-one-third@m",
+              "usa-width-one-whole"
+            ]
+          },
+          "html_structure": {
+            "score": 0.727,
+            "found": [
+              "a",
+              "footer",
+              "h1",
+              "h3",
+              "header",
+              "nav",
+              "p",
+              "section"
+            ],
+            "missing": [
+              "button",
+              "h2",
+              "main"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "nav",
+              "section"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label",
+              "role"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'div', 'div', 'nav', 'div', 'a']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/mistral_7b_20260310_182206/10_full_page.html"
+      }
+    ],
+    "without_skills": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.485,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.667,
+            "found": [
+              "usa-banner",
+              "usa-banner__content"
+            ],
+            "missing": [
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "usa-banner",
+              "usa-banner--call-to-action",
+              "usa-banner--govwide",
+              "usa-banner__content",
+              "usa-banner__description",
+              "usa-banner__title"
+            ]
+          },
+          "html_structure": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "header",
+              "section"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.0,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.647,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-alert",
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.885,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--inverse-dark",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled",
+              "usa-grid",
+              "usa-grid-row",
+              "usa-width-one-quarter"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.705,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.182,
+            "found": [
+              "grid-container",
+              "usa-button"
+            ],
+            "missing": [
+              "grid-col-12",
+              "grid-row",
+              "usa-card",
+              "usa-card-group",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "extra_uswds_classes": [
+              "grid-container",
+              "grid-margin-x",
+              "grid-x",
+              "usa-button"
+            ]
+          },
+          "html_structure": {
+            "score": 0.75,
+            "found": [
+              "div",
+              "h3",
+              "p"
+            ],
+            "missing": [
+              "button"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.948,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.875,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [
+              "usa-label"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--primary",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-form-group--no-margin-bottom",
+              "usa-input",
+              "usa-input--wide",
+              "usa-legend",
+              "usa-select",
+              "usa-select--wide",
+              "usa-sr-only",
+              "usa-textarea",
+              "usa-textarea--large"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-required"
+            ],
+            "bonus_details": [
+              "additional ARIA: ['aria-required']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.748,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.375,
+            "found": [
+              "usa-header",
+              "usa-nav",
+              "usa-navbar"
+            ],
+            "missing": [
+              "usa-header--basic",
+              "usa-logo",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-search"
+            ],
+            "extra_uswds_classes": [
+              "usa-brand__logo",
+              "usa-brand__text",
+              "usa-button",
+              "usa-button--primary",
+              "usa-button--search",
+              "usa-header",
+              "usa-header__brand",
+              "usa-header__container",
+              "usa-icon",
+              "usa-icon--nav",
+              "usa-input",
+              "usa-input--search",
+              "usa-nav",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-navbar",
+              "usa-navbar--expand-right",
+              "usa-navbar__brand",
+              "usa-navbar__container",
+              "usa-navbar__content",
+              "usa-navbar__heading",
+              "usa-navbar__toggler",
+              "usa-search-header",
+              "usa-search-header__form",
+              "usa-search-header__search"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "button",
+              "form",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.75,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-controls",
+              "aria-expanded",
+              "aria-label",
+              "aria-labelledby"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-controls', 'aria-expanded', 'aria-labelledby']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'header', 'div', 'a', 'div', 'form', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.651,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.5,
+            "found": [
+              "usa-table",
+              "usa-table--striped"
+            ],
+            "missing": [
+              "usa-table--bordered",
+              "usa-tag"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--secondary",
+              "usa-button--small",
+              "usa-table",
+              "usa-table--striped"
+            ]
+          },
+          "html_structure": {
+            "score": 0.857,
+            "found": [
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [
+              "span"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.15,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [
+              "aria-describedby"
+            ],
+            "bonus_details": [
+              "table scope attributes",
+              "additional ARIA: ['aria-describedby']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.434,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "grid-container",
+              "grid-gap",
+              "grid-row",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "main"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.647,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "grid-col",
+              "grid-row",
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "div",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "li",
+              "ol",
+              "select"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'div', 'main', 'div', 'div', 'div', 'form', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.612,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.444,
+            "found": [
+              "usa-banner",
+              "usa-button",
+              "usa-footer",
+              "usa-nav"
+            ],
+            "missing": [
+              "grid-container",
+              "grid-row",
+              "usa-card",
+              "usa-card-group",
+              "usa-header"
+            ],
+            "extra_uswds_classes": [
+              "usa-banner",
+              "usa-banner--call-to-action",
+              "usa-banner__content",
+              "usa-banner__title",
+              "usa-button",
+              "usa-button--primary",
+              "usa-button-group",
+              "usa-footer",
+              "usa-footer__contact",
+              "usa-grid",
+              "usa-grid--cols-3",
+              "usa-grid--row-gutter",
+              "usa-grid-item",
+              "usa-hero",
+              "usa-hero--reverse",
+              "usa-hero__content",
+              "usa-hero__headline",
+              "usa-icon-nav-icon",
+              "usa-nav",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-nav__list",
+              "usa-navbar",
+              "usa-navbar--expand-content",
+              "usa-navbar__brand",
+              "usa-navbar__collapse",
+              "usa-navbar__container",
+              "usa-navbar__toggle",
+              "usa-navbar__toggle-icon",
+              "usa-width-one-whole"
+            ]
+          },
+          "html_structure": {
+            "score": 0.818,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h3",
+              "main",
+              "nav",
+              "p",
+              "section"
+            ],
+            "missing": [
+              "h2",
+              "header"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "main",
+              "nav",
+              "section"
+            ]
+          },
+          "accessibility": {
+            "score": 0.15,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label",
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-expanded"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['aria-expanded']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/mistral_7b_20260310_182206/10_full_page.html"
+      }
+    ]
+  }
+}
