@@ -46,6 +46,23 @@ skills context (~17K tokens):
 | **codellama:7b** | 0.750 | 0.694 | -0.056 | No |
 | **mistral:7b** | 0.676 | 0.609 | -0.067 | No |
 
+Note - results are simple averages (mean) of the per-task composite scores across all 10 tasks.
+
+The composite scores above blend all five evaluation dimensions. Breaking out USWDS
+class accuracy alone — the single dimension most directly affected by skills context,
+since it measures whether the model uses the correct `usa-*` and `grid-*` class
+names — shows a sharper picture of where skills helped and where they didn't:
+
+| Model | Without Skills | With Skills | Delta |
+|:---|:---|:---|:---|
+| **qwen2.5-coder:7b** | 0.636 | 0.712 | **+0.076** |
+| **codellama:7b** | 0.587 | 0.508 | -0.079 |
+| **mistral:7b** | 0.404 | 0.346 | -0.058 |
+
+Even on this dimension, only qwen2.5-coder improved with the full skills context. This
+pattern — modest gains for the strongest model, degradation for the others — motivated
+the targeted approach in Phase 2.
+
 ### Phase 2: Custom Targeted Skill (qwen2.5-coder:7b)
 
 The Phase 1 results showed that the comprehensive blencorp skills, while valuable as a
@@ -77,14 +94,6 @@ The custom skill improvement is **3.7x larger** than full skills for composite s
 | Two-Col Layout | medium | 0.600 | 0.600 | **0.967** |
 | Step Indicator | hard | 0.676 | 0.698 | **0.964** |
 | Full Page | hard | 0.832 | 0.849 | **0.915** |
-
-### USWDS Class Accuracy (Phase 1)
-
-| Model | Without Skills | With Skills | Delta |
-|:---|:---|:---|:---|
-| **qwen2.5-coder:7b** | 0.636 | 0.712 | **+0.076** |
-| **codellama:7b** | 0.587 | 0.508 | -0.079 |
-| **mistral:7b** | 0.404 | 0.346 | -0.058 |
 
 ## Key Findings
 
