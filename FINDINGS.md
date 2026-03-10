@@ -61,9 +61,9 @@ names — shows a sharper picture of where skills helped and where they didn't:
 
 | Model | Without Skills | With Skills | Delta |
 |:---|:---|:---|:---|
-| **qwen2.5-coder:7b** | 0.636 | 0.712 | **+0.076** |
-| **codellama:7b** | 0.587 | 0.508 | -0.079 |
-| **mistral:7b** | 0.404 | 0.346 | -0.058 |
+| **qwen2.5-coder:7b** | 0.636 | 0.712 | **+0.076** | Skills Helped? |
+| **codellama:7b** | 0.587 | 0.508 | -0.079 | No |
+| **mistral:7b** | 0.404 | 0.346 | -0.058 | No |
 
 Even on this dimension, only qwen2.5-coder improved with the full skills context. This
 pattern — modest gains for the strongest model, degradation for the others — motivated
