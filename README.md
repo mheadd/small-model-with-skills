@@ -23,20 +23,20 @@ a set of agent skills covering the U.S. Web Design System (USWDS v3).
 │  (banners, forms, cards, tables, full pages, etc.)      │
 └──────────────┬──────────────────────┬───────────────────┘
                │                      │
-       ┌───────▼────────┐    ┌────────▼───────────┐
+       ┌───────▼───────-─┐    ┌───────▼--───────────┐
        │  WITHOUT Skills │    │   WITH Skills       │
        │  (base prompt)  │    │  (prompt + USWDS    │
-       │                 │    │   reference docs)    │
+       │                 │    │   reference docs)   │
        └───────┬─────────┘    └────────┬────────────┘
                │                       │
                ▼                       ▼
        ┌─────────────────────────────────────────┐
-       │          Automated Evaluation            │
+       │          Automated Evaluation           │
        │  • USWDS class correctness (30%)        │
-       │  • HTML structure (20%)                  │
-       │  • Accessibility attributes (20%)        │
-       │  • Completeness (15%)                    │
-       │  • HTML validity (15%)                   │
+       │  • HTML structure (20%)                 │
+       │  • Accessibility attributes (20%)       │
+       │  • Completeness (15%)                   │
+       │  • HTML validity (15%)                  │
        └─────────────────────────────────────────┘
 ```
 
