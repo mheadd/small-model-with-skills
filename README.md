@@ -7,7 +7,7 @@ with and without USWDS skill context injected into the prompt.
 
 ## Background
 
-Recent research suggests that domain-specific skill documentation — structured reference
+[Recent research](https://arxiv.org/abs/2602.12670) suggests that domain-specific skill documentation — structured reference
 material provided as context — can meaningfully improve smaller models' performance on
 specialized tasks. This repository provides a reproducible framework for testing that
 finding in the domain of government web development.
