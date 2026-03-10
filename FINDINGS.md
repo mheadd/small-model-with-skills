@@ -65,15 +65,15 @@ names — shows a sharper picture of where skills helped and where they didn't:
 | **codellama:7b** | 0.587 | 0.508 | -0.079 | No |
 | **mistral:7b** | 0.404 | 0.346 | -0.058 | No |
 
-Even on this dimension, only qwen2.5-coder improved with the full skills context. This
+Even on this dimension, only `qwen2.5-coder` improved with the full skills context. This
 pattern — modest gains for the strongest model, degradation for the others — motivated
 the targeted approach in Phase 2.
 
-### Phase 2: Custom Targeted Skill (qwen2.5-coder:7b)
+### Phase 2: Custom Targeted Skill (using qwen2.5-coder:7b model)
 
 The Phase 1 results showed that the comprehensive blencorp skills, while valuable as a
 reference, were too large for small models to process effectively. This motivated a
-different approach: rather than providing the full skills library, I analyzed which
+different approach: rather than providing the full skills library, I then analyzed which
 specific USWDS classes, HTML elements, and accessibility attributes qwen2.5-coder missed
 most often *without* skills, and created a custom skill file addressing only those
 weaknesses. At ~2.5K tokens, it is 85% smaller than the full skills context.
@@ -164,7 +164,8 @@ Several directions could extend this experiment:
 - **Larger open-source models.** Testing models like `qwen2.5-coder:32b` or
   `codellama:70b` against frontier models with skills enhancement would test
   whether skills files close the gap between large open-source models and commercial
-  frontier models on specialized tasks.
+  frontier models on specialized tasks. This is likely where the comprehensive USWDS skills from
+[blencorp/skills](https://github.com/blencorp/skills) will show an impact. These larger open source modles will not have the constrained context window of the smaller ones used in this experiment.
 
 - **Condensed skills context.** The test scripts include a `--condensed` flag
   that provides an intermediate option between full skills and the custom skill. Where
