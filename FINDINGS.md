@@ -59,9 +59,9 @@ class accuracy alone — the single dimension most directly affected by skills c
 since it measures whether the model uses the correct `usa-*` and `grid-*` class
 names — shows a sharper picture of where skills helped and where they didn't:
 
-| Model | Without Skills | With Skills | Delta |
+| Model | Without Skills | With Skills | Delta | Skills Helped? |
 |:---|:---|:---|:---|
-| **qwen2.5-coder:7b** | 0.636 | 0.712 | **+0.076** | Skills Helped? |
+| **qwen2.5-coder:7b** | 0.636 | 0.712 | **+0.076** | **Yes** |
 | **codellama:7b** | 0.587 | 0.508 | -0.079 | No |
 | **mistral:7b** | 0.404 | 0.346 | -0.058 | No |
 
