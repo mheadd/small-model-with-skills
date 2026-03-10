@@ -78,7 +78,7 @@ def generate(model: str, system_prompt: str, user_prompt: str, temperature: floa
     }
 
     start = time.time()
-    resp = requests.post(f"{OLLAMA_API}/api/chat", json=payload, timeout=300)
+    resp = requests.post(f"{OLLAMA_API}/api/chat", json=payload, timeout=600)
     resp.raise_for_status()
     elapsed = time.time() - start
 

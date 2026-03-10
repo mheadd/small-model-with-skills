@@ -1,0 +1,4090 @@
+{
+  "run_id": "codellama_7b_20260310_174206",
+  "model": "codellama:7b",
+  "without_skills": {
+    "num_tasks": 10,
+    "avg_composite": 0.75,
+    "avg_uswds_classes": 0.587,
+    "avg_html_structure": 0.815,
+    "avg_accessibility": 0.595,
+    "per_task": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.415,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "usa-accordion",
+              "usa-footer",
+              "usa-footer--medium",
+              "usa-footer__contact-heading",
+              "usa-footer__contact-links",
+              "usa-footer__contact-links-list",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-heading",
+              "usa-footer__secondary-links",
+              "usa-footer__secondary-links-list",
+              "usa-footer__secondary-section",
+              "usa-grid",
+              "usa-header",
+              "usa-header--extended",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-prose"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "header"
+            ],
+            "missing": [
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.15,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['role']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.671,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.125,
+            "found": [
+              "usa-alert"
+            ],
+            "missing": [
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": [
+              "usa-alert",
+              "usa-alert-body",
+              "usa-alert-error",
+              "usa-alert-heading",
+              "usa-alert-info",
+              "usa-alert-success",
+              "usa-alert-text",
+              "usa-alert-warning"
+            ]
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.9,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled",
+              "usa-button-group"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.759,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.364,
+            "found": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button"
+            ],
+            "missing": [
+              "usa-card",
+              "usa-card-group",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button"
+            ]
+          },
+          "html_structure": {
+            "score": 0.75,
+            "found": [
+              "button",
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.91,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-button",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [
+              "usa-fieldset",
+              "usa-legend"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-form",
+              "usa-form--contact",
+              "usa-form-group",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-sr-only",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.985,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-search"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-header",
+              "usa-header--basic",
+              "usa-input",
+              "usa-logo",
+              "usa-logo__img",
+              "usa-logo__link",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-search",
+              "usa-sr-only"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "button",
+              "form",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label",
+              "role"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-label",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['header', 'div', 'div', 'a', 'nav', 'form']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.82,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--blue",
+              "usa-tag--green",
+              "usa-tag--red",
+              "usa-tag--yellow"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "span",
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.615,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.429,
+            "found": [
+              "grid-container",
+              "grid-row",
+              "usa-alert"
+            ],
+            "missing": [
+              "grid-gap",
+              "usa-alert--info",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-3",
+              "grid-col-9",
+              "grid-container",
+              "grid-row",
+              "usa-alert",
+              "usa-alert-body",
+              "usa-alert-heading",
+              "usa-alert-info"
+            ]
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "main"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.658,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.643,
+            "found": [
+              "grid-col",
+              "grid-row",
+              "usa-button",
+              "usa-button-group",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select"
+            ],
+            "missing": [
+              "usa-button--outline",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-button-group",
+              "usa-button-outline",
+              "usa-button-primary",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-sr-only"
+            ]
+          },
+          "html_structure": {
+            "score": 0.9,
+            "found": [
+              "button",
+              "div",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "li",
+              "select"
+            ],
+            "missing": [
+              "ol"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.0,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['div', 'div', 'div', 'form', 'fieldset', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.772,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.556,
+            "found": [
+              "usa-button",
+              "usa-card",
+              "usa-footer",
+              "usa-header",
+              "usa-nav"
+            ],
+            "missing": [
+              "grid-container",
+              "grid-row",
+              "usa-banner",
+              "usa-card-group"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--big",
+              "usa-button--primary",
+              "usa-card",
+              "usa-card-grid",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__footer-actions",
+              "usa-card__header",
+              "usa-card__heading",
+              "usa-card__media",
+              "usa-footer",
+              "usa-footer--medium",
+              "usa-footer__contact-heading",
+              "usa-footer__contact-links",
+              "usa-footer__nav-heading",
+              "usa-footer__nav-links",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-heading",
+              "usa-footer__secondary-links",
+              "usa-footer__secondary-section",
+              "usa-grid",
+              "usa-header",
+              "usa-header--extended",
+              "usa-hero",
+              "usa-hero__container",
+              "usa-hero__heading",
+              "usa-layout-docs__main",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-section"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h2",
+              "h3",
+              "header",
+              "main",
+              "nav",
+              "p",
+              "section"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav",
+              "section"
+            ]
+          },
+          "accessibility": {
+            "score": 0.6,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'main', 'section', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/10_full_page.html"
+      }
+    ]
+  },
+  "with_skills": {
+    "num_tasks": 10,
+    "avg_composite": 0.694,
+    "avg_uswds_classes": 0.508,
+    "avg_html_structure": 0.743,
+    "avg_accessibility": 0.56,
+    "per_task": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.415,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "usa-footer",
+              "usa-footer--global",
+              "usa-footer__accessibility",
+              "usa-footer__accessibility-heading",
+              "usa-footer__contact-heading",
+              "usa-footer__contact-info",
+              "usa-footer__logo",
+              "usa-footer__policies",
+              "usa-footer__policies-heading",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-section",
+              "usa-grid",
+              "usa-header",
+              "usa-header--extended",
+              "usa-layout-docs__main",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "header"
+            ],
+            "missing": [
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.15,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['role']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'footer', 'div', 'div', 'div', 'a']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.596,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-alert",
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.9,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "grid-col",
+              "grid-row",
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.759,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.364,
+            "found": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button"
+            ],
+            "missing": [
+              "usa-card",
+              "usa-card-group",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "extra_uswds_classes": [
+              "grid-col",
+              "grid-container",
+              "grid-row",
+              "usa-button"
+            ]
+          },
+          "html_structure": {
+            "score": 0.75,
+            "found": [
+              "button",
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.985,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.693,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.625,
+            "found": [
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-nav",
+              "usa-navbar"
+            ],
+            "missing": [
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-search"
+            ],
+            "extra_uswds_classes": [
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-logo__heading",
+              "usa-logo__link",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-navbar",
+              "usa-navbar-menu"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "a",
+              "button",
+              "header"
+            ],
+            "missing": [
+              "form",
+              "input",
+              "nav"
+            ],
+            "semantic_html_used": [
+              "header"
+            ]
+          },
+          "accessibility": {
+            "score": 0.6,
+            "found_expected": [
+              "role"
+            ],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['header', 'div', 'div', 'em', 'a']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.82,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--green",
+              "usa-tag--red",
+              "usa-tag--yellow"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "span",
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.568,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.286,
+            "found": [
+              "grid-container",
+              "grid-row"
+            ],
+            "missing": [
+              "grid-gap",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-3",
+              "grid-col-9",
+              "grid-container",
+              "grid-row"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "main",
+              "nav",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.42,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.143,
+            "found": [
+              "grid-col",
+              "grid-row"
+            ],
+            "missing": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "grid-col",
+              "grid-container",
+              "grid-row"
+            ]
+          },
+          "html_structure": {
+            "score": 0.6,
+            "found": [
+              "button",
+              "div",
+              "form",
+              "input",
+              "label",
+              "select"
+            ],
+            "missing": [
+              "fieldset",
+              "legend",
+              "li",
+              "ol"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.05,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "aria-hidden"
+            ],
+            "bonus_details": [
+              "additional ARIA: ['aria-hidden']"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['div', 'div', 'div', 'form', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.787,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.667,
+            "found": [
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-footer",
+              "usa-header",
+              "usa-nav"
+            ],
+            "missing": [
+              "usa-banner",
+              "usa-card",
+              "usa-card-group"
+            ],
+            "extra_uswds_classes": [
+              "grid-col",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-button--big",
+              "usa-footer",
+              "usa-footer--big",
+              "usa-footer__contact",
+              "usa-footer__logo",
+              "usa-footer__nav",
+              "usa-footer__primary-content",
+              "usa-footer__secondary-content",
+              "usa-header",
+              "usa-header--extended",
+              "usa-hero",
+              "usa-hero__container",
+              "usa-hero__heading",
+              "usa-hero__text",
+              "usa-layout-docs__main",
+              "usa-layout-docs__main-content",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav-container",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar"
+            ]
+          },
+          "html_structure": {
+            "score": 0.909,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h2",
+              "header",
+              "main",
+              "nav",
+              "p",
+              "section"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav",
+              "section"
+            ]
+          },
+          "accessibility": {
+            "score": 0.6,
+            "found_expected": [
+              "role"
+            ],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/10_full_page.html"
+      }
+    ]
+  },
+  "deltas": {
+    "composite": -0.056,
+    "uswds_classes": -0.079,
+    "html_structure": -0.072,
+    "accessibility": -0.035
+  },
+  "evaluations": {
+    "with_skills": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.415,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "usa-footer",
+              "usa-footer--global",
+              "usa-footer__accessibility",
+              "usa-footer__accessibility-heading",
+              "usa-footer__contact-heading",
+              "usa-footer__contact-info",
+              "usa-footer__logo",
+              "usa-footer__policies",
+              "usa-footer__policies-heading",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-section",
+              "usa-grid",
+              "usa-header",
+              "usa-header--extended",
+              "usa-layout-docs__main",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "header"
+            ],
+            "missing": [
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.15,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['role']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'footer', 'div', 'div', 'div', 'a']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.596,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-alert",
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": []
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.9,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "grid-col",
+              "grid-row",
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.759,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.364,
+            "found": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button"
+            ],
+            "missing": [
+              "usa-card",
+              "usa-card-group",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "extra_uswds_classes": [
+              "grid-col",
+              "grid-container",
+              "grid-row",
+              "usa-button"
+            ]
+          },
+          "html_structure": {
+            "score": 0.75,
+            "found": [
+              "button",
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.985,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-input",
+              "usa-label",
+              "usa-legend",
+              "usa-select",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.693,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.625,
+            "found": [
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-nav",
+              "usa-navbar"
+            ],
+            "missing": [
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-search"
+            ],
+            "extra_uswds_classes": [
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-logo__heading",
+              "usa-logo__link",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav__item",
+              "usa-nav__link",
+              "usa-navbar",
+              "usa-navbar-menu"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "a",
+              "button",
+              "header"
+            ],
+            "missing": [
+              "form",
+              "input",
+              "nav"
+            ],
+            "semantic_html_used": [
+              "header"
+            ]
+          },
+          "accessibility": {
+            "score": 0.6,
+            "found_expected": [
+              "role"
+            ],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['header', 'div', 'div', 'em', 'a']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.82,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--green",
+              "usa-tag--red",
+              "usa-tag--yellow"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "span",
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.568,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.286,
+            "found": [
+              "grid-container",
+              "grid-row"
+            ],
+            "missing": [
+              "grid-gap",
+              "usa-alert",
+              "usa-alert--info",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-3",
+              "grid-col-9",
+              "grid-container",
+              "grid-row"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "main",
+              "nav",
+              "p"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.42,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.143,
+            "found": [
+              "grid-col",
+              "grid-row"
+            ],
+            "missing": [
+              "usa-button",
+              "usa-button--outline",
+              "usa-button-group",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "grid-col",
+              "grid-container",
+              "grid-row"
+            ]
+          },
+          "html_structure": {
+            "score": 0.6,
+            "found": [
+              "button",
+              "div",
+              "form",
+              "input",
+              "label",
+              "select"
+            ],
+            "missing": [
+              "fieldset",
+              "legend",
+              "li",
+              "ol"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.05,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "aria-hidden"
+            ],
+            "bonus_details": [
+              "additional ARIA: ['aria-hidden']"
+            ]
+          },
+          "completeness": {
+            "score": 0.75,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": false,
+                "note": "No usa-* classes found"
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['div', 'div', 'div', 'form', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.787,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.667,
+            "found": [
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-footer",
+              "usa-header",
+              "usa-nav"
+            ],
+            "missing": [
+              "usa-banner",
+              "usa-card",
+              "usa-card-group"
+            ],
+            "extra_uswds_classes": [
+              "grid-col",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-button--big",
+              "usa-footer",
+              "usa-footer--big",
+              "usa-footer__contact",
+              "usa-footer__logo",
+              "usa-footer__nav",
+              "usa-footer__primary-content",
+              "usa-footer__secondary-content",
+              "usa-header",
+              "usa-header--extended",
+              "usa-hero",
+              "usa-hero__container",
+              "usa-hero__heading",
+              "usa-hero__text",
+              "usa-layout-docs__main",
+              "usa-layout-docs__main-content",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav-container",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar"
+            ]
+          },
+          "html_structure": {
+            "score": 0.909,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h2",
+              "header",
+              "main",
+              "nav",
+              "p",
+              "section"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav",
+              "section"
+            ]
+          },
+          "accessibility": {
+            "score": 0.6,
+            "found_expected": [
+              "role"
+            ],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/with_skills/codellama_7b_20260310_174206/10_full_page.html"
+      }
+    ],
+    "without_skills": [
+      {
+        "task_id": "01_gov_banner",
+        "task_name": "Government Banner",
+        "difficulty": "easy",
+        "composite_score": 0.415,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.0,
+            "found": [],
+            "missing": [
+              "usa-banner",
+              "usa-banner__content",
+              "usa-banner__header"
+            ],
+            "extra_uswds_classes": [
+              "usa-accordion",
+              "usa-footer",
+              "usa-footer--medium",
+              "usa-footer__contact-heading",
+              "usa-footer__contact-links",
+              "usa-footer__contact-links-list",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-heading",
+              "usa-footer__secondary-links",
+              "usa-footer__secondary-links-list",
+              "usa-footer__secondary-section",
+              "usa-grid",
+              "usa-header",
+              "usa-header--extended",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-prose"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "header"
+            ],
+            "missing": [
+              "section"
+            ],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.15,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements",
+              "additional ARIA: ['role']"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/01_gov_banner.html"
+      },
+      {
+        "task_id": "02_alert_set",
+        "task_name": "Alert Components",
+        "difficulty": "easy",
+        "composite_score": 0.671,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.125,
+            "found": [
+              "usa-alert"
+            ],
+            "missing": [
+              "usa-alert--error",
+              "usa-alert--info",
+              "usa-alert--success",
+              "usa-alert--warning",
+              "usa-alert__body",
+              "usa-alert__heading",
+              "usa-alert__text"
+            ],
+            "extra_uswds_classes": [
+              "usa-alert",
+              "usa-alert-body",
+              "usa-alert-error",
+              "usa-alert-heading",
+              "usa-alert-info",
+              "usa-alert-success",
+              "usa-alert-text",
+              "usa-alert-warning"
+            ]
+          },
+          "html_structure": {
+            "score": 0.667,
+            "found": [
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/02_alert_set.html"
+      },
+      {
+        "task_id": "03_button_variants",
+        "task_name": "Button Variants",
+        "difficulty": "easy",
+        "composite_score": 0.9,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--accent-cool",
+              "usa-button--accent-warm",
+              "usa-button--base",
+              "usa-button--big",
+              "usa-button--inverse",
+              "usa-button--outline",
+              "usa-button--secondary",
+              "usa-button--unstyled",
+              "usa-button-group"
+            ]
+          },
+          "html_structure": {
+            "score": 0.5,
+            "found": [
+              "button"
+            ],
+            "missing": [
+              "a"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/03_button_variants.html"
+      },
+      {
+        "task_id": "04_card_grid",
+        "task_name": "Card Grid Layout",
+        "difficulty": "medium",
+        "composite_score": 0.759,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.364,
+            "found": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button"
+            ],
+            "missing": [
+              "usa-card",
+              "usa-card-group",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__header",
+              "usa-card__heading"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button"
+            ]
+          },
+          "html_structure": {
+            "score": 0.75,
+            "found": [
+              "button",
+              "div",
+              "p"
+            ],
+            "missing": [
+              "h3"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/04_card_grid.html"
+      },
+      {
+        "task_id": "05_contact_form",
+        "task_name": "Contact Form",
+        "difficulty": "medium",
+        "composite_score": 0.91,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.75,
+            "found": [
+              "usa-button",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-textarea"
+            ],
+            "missing": [
+              "usa-fieldset",
+              "usa-legend"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-form",
+              "usa-form--contact",
+              "usa-form-group",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-sr-only",
+              "usa-textarea"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "button",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "option",
+              "select",
+              "textarea"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [],
+            "missing_expected": [],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['form', 'fieldset', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/05_contact_form.html"
+      },
+      {
+        "task_id": "06_header_nav",
+        "task_name": "Site Header with Navigation",
+        "difficulty": "medium",
+        "composite_score": 0.985,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-header",
+              "usa-header--basic",
+              "usa-logo",
+              "usa-nav",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-search"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-header",
+              "usa-header--basic",
+              "usa-input",
+              "usa-logo",
+              "usa-logo__img",
+              "usa-logo__link",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-search",
+              "usa-sr-only"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "button",
+              "form",
+              "header",
+              "input",
+              "nav"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "header",
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 1.0,
+            "found_expected": [
+              "aria-label",
+              "role"
+            ],
+            "missing_expected": [],
+            "all_aria_attrs": [
+              "aria-label",
+              "role"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['header', 'div', 'div', 'a', 'nav', 'form']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/06_header_nav.html"
+      },
+      {
+        "task_id": "07_data_table",
+        "task_name": "Data Table",
+        "difficulty": "medium",
+        "composite_score": 0.82,
+        "scores": {
+          "uswds_classes": {
+            "score": 1.0,
+            "found": [
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag"
+            ],
+            "missing": [],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-table",
+              "usa-table--bordered",
+              "usa-table--striped",
+              "usa-tag",
+              "usa-tag--blue",
+              "usa-tag--green",
+              "usa-tag--red",
+              "usa-tag--yellow"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "span",
+              "table",
+              "tbody",
+              "td",
+              "th",
+              "thead",
+              "tr"
+            ],
+            "missing": [],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "scope"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "table scope attributes"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/07_data_table.html"
+      },
+      {
+        "task_id": "08_two_col_layout",
+        "task_name": "Two-Column Sidebar Layout",
+        "difficulty": "medium",
+        "composite_score": 0.615,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.429,
+            "found": [
+              "grid-container",
+              "grid-row",
+              "usa-alert"
+            ],
+            "missing": [
+              "grid-gap",
+              "usa-alert--info",
+              "usa-current",
+              "usa-sidenav"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-3",
+              "grid-col-9",
+              "grid-container",
+              "grid-row",
+              "usa-alert",
+              "usa-alert-body",
+              "usa-alert-heading",
+              "usa-alert-info"
+            ]
+          },
+          "html_structure": {
+            "score": 0.833,
+            "found": [
+              "a",
+              "div",
+              "h1",
+              "nav",
+              "p"
+            ],
+            "missing": [
+              "main"
+            ],
+            "semantic_html_used": [
+              "nav"
+            ]
+          },
+          "accessibility": {
+            "score": 0.1,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-current",
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 1.0,
+            "has_doctype": false,
+            "issues": []
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/08_two_col_layout.html"
+      },
+      {
+        "task_id": "09_step_indicator_form",
+        "task_name": "Multi-Step Form with Step Indicator",
+        "difficulty": "hard",
+        "composite_score": 0.658,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.643,
+            "found": [
+              "grid-col",
+              "grid-row",
+              "usa-button",
+              "usa-button-group",
+              "usa-fieldset",
+              "usa-form",
+              "usa-input",
+              "usa-label",
+              "usa-select"
+            ],
+            "missing": [
+              "usa-button--outline",
+              "usa-step-indicator",
+              "usa-step-indicator__segment",
+              "usa-step-indicator__segment--complete",
+              "usa-step-indicator__segment--current"
+            ],
+            "extra_uswds_classes": [
+              "grid-col-12",
+              "grid-container",
+              "grid-row",
+              "usa-button",
+              "usa-button-group",
+              "usa-button-outline",
+              "usa-button-primary",
+              "usa-fieldset",
+              "usa-form",
+              "usa-form-group",
+              "usa-input",
+              "usa-label",
+              "usa-select",
+              "usa-sr-only"
+            ]
+          },
+          "html_structure": {
+            "score": 0.9,
+            "found": [
+              "button",
+              "div",
+              "fieldset",
+              "form",
+              "input",
+              "label",
+              "legend",
+              "li",
+              "select"
+            ],
+            "missing": [
+              "ol"
+            ],
+            "semantic_html_used": []
+          },
+          "accessibility": {
+            "score": 0.0,
+            "found_expected": [],
+            "missing_expected": [
+              "aria-label"
+            ],
+            "all_aria_attrs": [],
+            "bonus_details": []
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": false,
+            "issues": [
+              "Potentially unclosed tags: ['div', 'div', 'div', 'form', 'fieldset', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/09_step_indicator_form.html"
+      },
+      {
+        "task_id": "10_full_page",
+        "task_name": "Complete Government Page",
+        "difficulty": "hard",
+        "composite_score": 0.772,
+        "scores": {
+          "uswds_classes": {
+            "score": 0.556,
+            "found": [
+              "usa-button",
+              "usa-card",
+              "usa-footer",
+              "usa-header",
+              "usa-nav"
+            ],
+            "missing": [
+              "grid-container",
+              "grid-row",
+              "usa-banner",
+              "usa-card-group"
+            ],
+            "extra_uswds_classes": [
+              "usa-button",
+              "usa-button--big",
+              "usa-button--primary",
+              "usa-card",
+              "usa-card-grid",
+              "usa-card__body",
+              "usa-card__container",
+              "usa-card__footer",
+              "usa-card__footer-actions",
+              "usa-card__header",
+              "usa-card__heading",
+              "usa-card__media",
+              "usa-footer",
+              "usa-footer--medium",
+              "usa-footer__contact-heading",
+              "usa-footer__contact-links",
+              "usa-footer__nav-heading",
+              "usa-footer__nav-links",
+              "usa-footer__primary-section",
+              "usa-footer__secondary-heading",
+              "usa-footer__secondary-links",
+              "usa-footer__secondary-section",
+              "usa-grid",
+              "usa-header",
+              "usa-header--extended",
+              "usa-hero",
+              "usa-hero__container",
+              "usa-hero__heading",
+              "usa-layout-docs__main",
+              "usa-logo",
+              "usa-logo__text",
+              "usa-menu-btn",
+              "usa-nav",
+              "usa-nav__link",
+              "usa-nav__primary",
+              "usa-nav__primary-item",
+              "usa-navbar",
+              "usa-section"
+            ]
+          },
+          "html_structure": {
+            "score": 1.0,
+            "found": [
+              "a",
+              "button",
+              "footer",
+              "h1",
+              "h2",
+              "h3",
+              "header",
+              "main",
+              "nav",
+              "p",
+              "section"
+            ],
+            "missing": [],
+            "semantic_html_used": [
+              "footer",
+              "header",
+              "main",
+              "nav",
+              "section"
+            ]
+          },
+          "accessibility": {
+            "score": 0.6,
+            "found_expected": [
+              "aria-label"
+            ],
+            "missing_expected": [
+              "role"
+            ],
+            "all_aria_attrs": [
+              "aria-label"
+            ],
+            "bonus_details": [
+              "semantic HTML elements"
+            ]
+          },
+          "completeness": {
+            "score": 1.0,
+            "checks": [
+              {
+                "check": "minimum_length",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_html_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "has_closing_tags",
+                "passed": true,
+                "note": ""
+              },
+              {
+                "check": "uses_uswds_classes",
+                "passed": true,
+                "note": ""
+              }
+            ]
+          },
+          "html_validity": {
+            "score": 0.9,
+            "has_doctype": true,
+            "issues": [
+              "Potentially unclosed tags: ['html', 'head', 'body', 'main', 'section', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div', 'div']"
+            ]
+          }
+        },
+        "weights": {
+          "uswds_classes": 0.3,
+          "html_structure": 0.2,
+          "accessibility": 0.2,
+          "completeness": 0.15,
+          "html_validity": 0.15
+        },
+        "html_file": "results/without_skills/codellama_7b_20260310_174206/10_full_page.html"
+      }
+    ]
+  }
+}
