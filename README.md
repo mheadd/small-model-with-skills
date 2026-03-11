@@ -148,7 +148,7 @@ python scripts/compare_runs.py results/eval_*.json
 The 10 tasks span three difficulty levels:
 
 | Difficulty | Tasks | What's Tested |
-|---|---|---|
+|:---|:---|:---|
 | **Easy** | Gov Banner, Alerts, Buttons | Single component, correct class names |
 | **Medium** | Card Grid, Contact Form, Header, Table, Sidebar Layout | Multi-component composition, grid system, forms |
 | **Hard** | Step Indicator Form, Complete Page | Full-page layouts combining many USWDS components |
@@ -158,7 +158,7 @@ The 10 tasks span three difficulty levels:
 Each output is scored on five dimensions:
 
 | Dimension | Weight | What It Measures |
-|---|---|---|
+|:---|:---|:---|
 | **USWDS Class Usage** | 30% | Presence of expected `usa-*` and `grid-*` CSS classes |
 | **HTML Structure** | 20% | Correct semantic HTML elements (`<header>`, `<nav>`, `<main>`, etc.) |
 | **Accessibility** | 20% | ARIA attributes, `scope` on `<th>`, semantic HTML |
@@ -204,7 +204,7 @@ python scripts/compare_runs.py results/eval_*.json
 ## Configuration
 
 | Environment Variable | Default | Description |
-|---|---|---|
+|:---|:---|:---|
 | `OLLAMA_API_URL` | `http://localhost:11434` | Ollama API endpoint |
 
 ## Alternative Setups for Reproducibility
@@ -256,7 +256,7 @@ using `--gpus all` with the
 ### Summary
 
 | Approach | macOS Performance | Linux GPU Performance | Reproducibility | Complexity |
-|---|---|---|---|---|
+|:---|:---|:---|:---|:---|
 | Host Ollama + Python (default) | Fast (Metal) | Fast (CUDA) | Manual setup | Low |
 | Containerized Python + Host Ollama | Fast (Metal) | Fast (CUDA) | Good | Medium |
 | Full Docker Compose | Slow (CPU only) | Fast (CUDA + `--gpus`) | Best | Medium |
