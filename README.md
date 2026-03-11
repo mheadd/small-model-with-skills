@@ -17,7 +17,7 @@ as a starting point — a comprehensive set of agent skills covering the U.S. We
 System (USWDS v3). These skills are well-suited for use with larger or frontier models
 that can effectively process their full ~17K-token context. However, the experiments
 revealed that smaller 7B-parameter models struggle with that volume of reference material.
-This led us to develop a custom, narrowly focused skill file derived from analyzing the
+This led to the development a custom, narrowly focused skill file derived from analyzing the
 model's specific weaknesses — an approach that proved dramatically more effective for
 small models. See [FINDINGS.md](FINDINGS.md) for the full analysis.
 
