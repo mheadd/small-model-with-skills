@@ -6,6 +6,12 @@ But on the upside, customized instruction files for smaller open-source models c
 dramatically improve the quality of their output, potentially making them a viable
 alternative to larger or commercial offerings for specialized tasks.
 
+Phase 3 testing with a larger 35B-parameter model (`qwen3.5:35b-a3b-q4_K_M`) confirmed
+the other side of this finding: comprehensive skills context that overwhelms small models
+can be highly effective for larger ones. The 35B model showed a +0.230 composite
+improvement with full skills — 13.5x the gain the best 7B model achieved with the
+same context.
+
 ## Overview
 
 This experiment used the comprehensive USWDS skills from
@@ -15,14 +21,16 @@ thorough coverage of USWDS v3 components, design tokens, grid layout, utilities,
 Sass theming — approximately 17K tokens of reference material.
 
 For larger or frontier models with broad context windows, this comprehensive coverage
-is likely well-suited. However, these experiments with 7B-parameter models revealed that
+is likely well-suited — and Phase 3 testing with a 35B-parameter model confirmed this.
+However, the earlier experiments with 7B-parameter models revealed that
 this volume of context can overwhelm smaller models, leading to the decision to develop a custom,
-narrower skill file targeting the specific patterns these saller models struggle with. The results
+narrower skill file targeting the specific patterns these smaller models struggle with. The results
 strongly suggest that **for small models, less is more** — focused, data-driven skill
 files outperform comprehensive ones by a wide margin.
 
 This does not diminish the value of more comprehensive skills as a reference or as context for
-more capable models. Rather, it highlights that skill authoring for small models is a
+more capable models — in fact, the Phase 3 results demonstrate that larger models benefit
+substantially from the full skills context. Skill authoring for small models is a
 distinct challenge that benefits from a different approach: analyze what the smaller model
 struggles with, and provide only the targeted guidance it needs.
 
@@ -101,6 +109,63 @@ The custom skill improvement is **3.7x larger** than full skills for composite s
 | Step Indicator | hard | 0.676 | 0.698 | **0.964** |
 | Full Page | hard | 0.832 | 0.849 | **0.915** |
 
+### Phase 3: Larger Model with Full Skills (qwen3.5:35b)
+
+A key question from Phase 1 was whether the full skills context — which overwhelmed the
+7B models — would prove effective for a larger model with a bigger context window. Testing
+`qwen3.5:35b-a3b-q4_K_M` (a 35B-parameter model, quantized to Q4_K_M, run on an RTX 4090)
+provided a clear answer.
+
+| Condition | Composite | USWDS Classes | HTML Structure | Accessibility |
+|:---|:---|:---|:---|:---|
+| No skills | 0.697 | 0.549 | 0.550 | 0.805 |
+| Full skills (~17K tokens) | **0.927 (+0.230)** | **0.955 (+0.406)** | **0.872 (+0.322)** | **0.890 (+0.085)** |
+
+The +0.230 composite improvement is **13.5x larger** than what qwen2.5-coder:7b achieved
+with the same full skills context (+0.017), and even exceeds the improvement the custom
+targeted skill provided to qwen2.5-coder:7b (+0.183). The USWDS class accuracy improvement
+of +0.406 is the largest single-dimension gain in any phase of this experiment.
+
+Notably, the 35B model's *baseline* without skills (0.697) is actually lower than
+qwen2.5-coder:7b's baseline (0.792). This suggests that `qwen3.5:35b` — a
+general-purpose model — has less pre-existing USWDS knowledge than the code-specialized
+7B model, but its larger context window allows it to absorb and apply the full skills
+reference far more effectively.
+
+#### Per-Task Results: qwen3.5:35b
+
+| Task | Difficulty | No Skills | Full Skills | Delta |
+|:---|:---|:---|:---|:---|
+| Gov Banner | easy | 0.885 | **0.985** | +0.100 |
+| Alert Set | easy | 0.350 | **0.896** | +0.546 |
+| Button Variants | easy | 0.350 | **0.885** | +0.535 |
+| Card Grid | medium | 0.930 | 0.880 | -0.050 |
+| Contact Form | medium | 0.985 | 0.985 | +0.000 |
+| Header Nav | medium | 0.584 | **0.985** | +0.401 |
+| Data Table | medium | 0.830 | 0.835 | +0.005 |
+| Two-Col Layout | medium | 0.914 | 0.930 | +0.016 |
+| Step Indicator | hard | 0.448 | **0.902** | +0.454 |
+| Full Page | hard | 0.691 | **0.985** | +0.294 |
+
+The largest gains came on the tasks where the model struggled most without skills:
+Alert Set (+0.546), Button Variants (+0.535), Step Indicator (+0.454), and Header Nav
+(+0.401). These are components with specific USWDS class names and structures that the
+model could not infer from general training data alone.
+
+#### Cross-Model Comparison: Full Skills Effectiveness
+
+Comparing all four models with full skills context:
+
+| Model | Params | Without Skills | With Full Skills | Delta | Skills Helped? |
+|:---|:---|:---|:---|:---|:---|
+| **qwen3.5:35b** | 35B | 0.697 | **0.927** | **+0.230** | **Yes** |
+| **qwen2.5-coder:7b** | 7B | 0.792 | 0.809 | +0.017 | Yes (modest) |
+| **codellama:7b** | 7B | 0.750 | 0.694 | -0.056 | No |
+| **mistral:7b** | 7B | 0.676 | 0.609 | -0.067 | No |
+
+The relationship between model size and skills effectiveness is striking: the 35B model
+derives an order of magnitude more benefit from the same skills context than any 7B model.
+
 ## Key Findings
 
 1. **Targeted skills dramatically outperform comprehensive skills.** The custom skill
@@ -142,6 +207,24 @@ The custom skill improvement is **3.7x larger** than full skills for composite s
    `usa-banner__content`). This is exactly the kind of factual recall that targeted
    reference documentation excels at providing.
 
+8. **Larger models unlock the full value of comprehensive skills.** The 35B model
+   achieved a +0.230 composite improvement with the full blencorp skills — 13.5x
+   what the best 7B model gained from the same context. This confirms that
+   comprehensive, well-structured skills files are not wasted effort; they simply
+   require models with sufficient context capacity to use them effectively.
+
+9. **Context capacity matters more than baseline domain knowledge.** The 35B model's
+   baseline without skills (0.697) was actually *lower* than qwen2.5-coder:7b's
+   (0.792), yet it responded far more effectively to the full skills context. This
+   suggests that a model's ability to process and apply reference documentation is more
+   dependent on context window capacity than on pre-existing domain knowledge.
+
+10. **The right skill strategy depends on model size.** For 7B models, a targeted
+    ~2.5K-token custom skill outperformed the full ~17K-token skills context by 3.7x.
+    For the 35B model, the full skills context alone produced a +0.230 improvement —
+    larger than even the custom skill's +0.183 gain on the 7B model. Skill authors
+    should consider their target model class when designing skills files.
+
 ## Future Work
 
 Several directions could extend this experiment:
@@ -161,11 +244,18 @@ Several directions could extend this experiment:
   hybrid approach where tooling surfaces the weaknesses and a human writes the
   targeted guidance.
 
-- **Larger open-source models.** Testing models like `qwen2.5-coder:32b` or
-  `codellama:70b` against frontier models with skills enhancement would test
-  whether skills files close the gap between large open-source models and commercial
-  frontier models on specialized tasks. This is likely where the comprehensive USWDS skills from
-[blencorp/skills](https://github.com/blencorp/skills) will show an impact. These larger open source modles will not have the constrained context window of the smaller ones used in this experiment.
+- **Larger open-source models.** Phase 3 testing with `qwen3.5:35b` confirmed
+  that larger models benefit dramatically from the full skills context (+0.230
+  composite improvement). Further testing with other large open-source models
+  (e.g., `codellama:70b`, `qwen2.5-coder:32b`) could confirm whether this
+  pattern generalizes, and comparison against commercial frontier models would
+  test whether skills files close the remaining gap on specialized tasks.
+
+- **Custom skills for the 35B model.** The 35B model thrived with full skills, but its
+  baseline (0.697) has clear weaknesses — Alert Set (0.350), Button Variants (0.350),
+  and Step Indicator (0.448) all scored poorly without skills. A targeted custom skill
+  for the 35B model could potentially push it even higher than 0.927, especially on
+  the Card Grid task where it slightly regressed with full skills (0.930 → 0.880).
 
 - **Condensed skills context.** The test scripts include a `--condensed` flag
   that provides an intermediate option between full skills and the custom skill. Where
